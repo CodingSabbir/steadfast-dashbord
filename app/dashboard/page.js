@@ -1,9 +1,19 @@
 
+import CardIcon from "../components/dashboard/CardIcon";
+import CardTitle from "../components/dashboard/CardTitle";
+import TextCard from "../components/dashboard/TextCard";
+import AddImage from "../components/dashboard/AddImage";
+import ChartView from "../components/dashboard/ChartView";
+
 
 const DashbordPage = () => {
     return (
         <div>
-            home page 
+           <CardIcon/>
+           <TextCard/>
+           <CardTitle/>
+        <AddImage/>
+        <ChartView/>
         </div>
     );
 };

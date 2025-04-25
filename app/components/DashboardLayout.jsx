@@ -23,7 +23,10 @@ const DashboardLayout = ({ children }) => {
           toggleMobileSearch={toggleMobileSearch}
           showMobileSearch={showMobileSearch}
         />
-        <main className="p-4 bg-gray-100 min-h-screen">{children}</main>
+        <div className="p-5 bg-gray-100">
+        <main className=" min-h-screen ">{children}</main>
+        <p className="text-center text-[#a3a3a3] text-[14px] border-t pt-4 mx-5 font-normal">© 2025 SteadFast. All rights reserved</p>
+        </div>
       </div>
     </div>
   );
