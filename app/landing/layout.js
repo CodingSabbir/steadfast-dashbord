@@ -9,10 +9,7 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 
-export const metadata = {
-  title: "SteadFast Landing Page",
-  description: "A clone of the SteadFast landing page interface",
-};
+
 
 export default function LandingLayout({ children }) {
   return (

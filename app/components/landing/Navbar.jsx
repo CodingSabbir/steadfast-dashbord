@@ -12,7 +12,8 @@ const Navbar = () => {
 
   return (
   
-     <nav className="fixed top-0 left-0 w-full bg-white shadow-sm z-50 p-3">
+   <div>
+      <nav className="fixed top-0 left-0 w-full bg-white shadow-sm z-50 p-3">
       <div className="flex items-center justify-between container mx-auto">
         {/* Left - Logo and Mobile Menu Button */}
         <div className="flex items-center gap-4">
@@ -34,7 +35,7 @@ const Navbar = () => {
         {/* Center - Desktop Navigation */}
         <div className="hidden md:flex flex-1 justify-center">
           <ul className="flex items-center gap-6 text-lg text-[#424242]">
-            <li className="cursor-pointer font-medium text-black text-[16px] hover:text-[#00b795] transition-all">
+            <li className="cursor-pointer font-medium text-black bg-success text-[16px] hover:text-[#00b795] transition-all">
               Home
             </li>
             <li className="cursor-pointer font-medium text-black text-[16px] hover:text-[#00b795] transition-all">
@@ -46,7 +47,13 @@ const Navbar = () => {
             <li className="cursor-pointer font-medium text-black text-[16px] hover:text-[#00b795] transition-all">
               Contact
             </li>
-            <div className="flex gap-2 items-center ml-7">
+            
+          </ul>
+        </div>
+
+        {/* Right - Auth Buttons (Visible on both mobile and desktop) */}
+        <div className="flex items-center gap-4">
+        <div className=" md:flex gap-2 items-center hidden md:block">
             <Image
             className="cursor-pointer"
             src="https://steadfast.com.bd/landing-page/asset/images/parcel_tarck_icon.svg"
@@ -54,16 +61,10 @@ const Navbar = () => {
             height={20}
             alt="navimage"
           />
-          <li className="cursor-pointer font-semibold text-[#00b795]  text-[16px] hover:text-[#00b795] transition-all">
+          <li className="cursor-pointer list-none font-semibold text-[#00b795]  text-[16px] hover:text-[#00b795] transition-all">
             Track Parcel
             </li>
             </div>
-          </ul>
-        </div>
-
-        {/* Right - Auth Buttons (Visible on both mobile and desktop) */}
-        <div className="flex items-center gap-4">
-        
           <button className="cursor-pointer px-4 py-2 font-bold tracking-wider text-black text-[16px] hover:text-[#00b795] transition-all hidden md:block">
             Login
           </button>
@@ -160,6 +161,8 @@ const Navbar = () => {
         />
       )}
     </nav>
+ 
+   </div>
   
   );
 };

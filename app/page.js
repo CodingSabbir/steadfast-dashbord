@@ -1,11 +1,18 @@
 "use client";
 
-import DashboardLayout from "./components/DashboardLayout";
+import FeaturesLogo from "./components/landing/FeaturesLogo";
+import HeroSection from "./components/landing/HeroSection";
+import ServicesSection from "./components/landing/ServiceCard";
+import TrackParcel from "./components/landing/TrackParcel";
+import LandingLayout from "./landing/layout";
 
 export default function Home() {
   return (
-    <DashboardLayout>
-      <h1>Welcome to SteadFast</h1>
-    </DashboardLayout>
+    <LandingLayout>
+        <HeroSection />
+        <TrackParcel />
+        <FeaturesLogo />
+        <ServicesSection/>
+    </LandingLayout>
   );
 }

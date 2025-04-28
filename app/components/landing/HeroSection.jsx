@@ -3,14 +3,11 @@ import Image from "next/image";
 const HeroSection = () => {
   return (
     <div
-      className=" h-[884px]  mt-10 bg-cover bg-center"
-      style={{
-        backgroundImage:
-          "url('https://steadfast.com.bd/landing-page/asset/images/intro_bg.webp')",
-      }}
+      className=" h-[800px] md:h-[750px] bg-teal-100 mt-10"
+     
     >
-      <div className="container mx-auto pt-10 md:pt-16">
-        <div className="grid grid-cols-1 sm:grid-cols-5 pt-20 px-3">
+      <div className="container mx-auto pt-10 md:pt-16 ">
+        <div className="grid grid-cols-1 sm:grid-cols-5 pt-20 px-4">
           <div className="col-span-2  md:pt-10">
             <div className="text-center md:text-start">
               <h2 className=" text-[32px] md:text-[48px] text-black tracking-wide font-bold leading-none">
@@ -35,7 +32,7 @@ const HeroSection = () => {
           <div className="col-span-2 ">
             <div className="flex justify-center md:flex-none">
               <Image
-                className=" w-72 pt-5 md:pt-0 md:w-full"
+                className=" w-72 pt-5 md:pt-0 md:w-full "
                 src="https://steadfast.com.bd/landing-page/asset/images/rider.svg"
                 width={1000}
                 height={600}
@@ -107,3 +104,8 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
+
+
+
+
