@@ -10,8 +10,8 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "SteadFast Dashboard Clone",
-  description: "A clone of the SteadFast dashboard interface",
+  title: "Courier Dashboard",
+  description: "The dashboard interface",
 };
 
 export default function RootLayout({ children }) {
