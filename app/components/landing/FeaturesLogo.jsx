@@ -8,18 +8,18 @@ const logoData = [
   },
   {
     type: "logo",
-    logo: "https://cdn.easyfrontend.com/pictures/logos/color-logo-3.png",
+    logo: "/img/landing/color-logo-6.png",
     alt: "RANGS",
     name: "RANGS",
   },
   {
     type: "logo",
-    logo: "https://cdn.easyfrontend.com/pictures/logos/color-logo-6.png",
+    logo: "/img/landing/color-logo-3.png",
     alt: "claraz",
   },
   {
     type: "logo",
-    logo: "https://cdn.easyfrontend.com/pictures/logos/color-logo-7.png",
+    logo: "/img/landing/color-logo-7.png",
     alt: "ojler@sap",
   },
   {
@@ -29,17 +29,17 @@ const logoData = [
   },
   {
     type: "logo",
-    logo: "https://cdn.easyfrontend.com/pictures/logos/color-logo-8.png",
+    logo: "/img/landing/color-logo-3.png",
     alt: "othoba",
   },
   {
     type: "logo",
-    logo: "https://cdn.easyfrontend.com/pictures/logos/color-logo-8.png",
+    logo: "/img/landing/color-logo-7.png",
     alt: "SME 2",
   },
   {
     type: "logo",
-    logo: "https://cdn.easyfrontend.com/pictures/logos/color-logo-8.png",
+    logo: "/img/landing/color-logo-6.png",
     alt: "SME 3",
   },
 ];

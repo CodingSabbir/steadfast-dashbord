@@ -1,5 +1,7 @@
 "use client";
 
+import ClientReview from "./components/landing/ClientReview";
+import DeliveryCalculator from "./components/landing/DeliveryCalc";
 import FeaturesLogo from "./components/landing/FeaturesLogo";
 import HeroSection from "./components/landing/HeroSection";
 import ServicesSection from "./components/landing/ServiceCard";
@@ -13,6 +15,8 @@ export default function Home() {
         <TrackParcel />
         <FeaturesLogo />
         <ServicesSection/>
+        <DeliveryCalculator/>
+        <ClientReview/>
     </LandingLayout>
   );
 }

@@ -3,27 +3,45 @@ import Image from "next/image";
 
 const services = [
   {
-    image: "/images/branding-icon.png", 
-    alt: "Branding Service",
-    title: "Branding",
-    description: "Professional branding solutions for your business."
+    image: "/img/landing/factory.png", 
+    alt: "Industry-leading tech",
+    title: "Industry-leading tech",
+    description: "Professional branding solutions for your business web development services."
   },
   {
-    image: "/images/marketing-icon.png", 
+    image: "/img/landing/credit-card.png", 
     alt: "Content Marketing",
-    title: "Content Marketing",
-    description: "Strategic content to grow your audience."
+    title: "Next day payment",
+    description: "Strategic content to grow your audience web development services."
   },
   {
-    image: "/images/webdev-icon.png", 
+    image: "/img/landing/good-feedback.png", 
     alt: "Web Development",
-    title: "Web Development",
-    description: "Modern web development services."
-  }
+    title: "Best COD rates",
+    description: "Modern web development services web development services."
+  },
+  {
+    image: "/img/landing/security.png", 
+    alt: "Web Development",
+    title: "Secure handling",
+    description: "Modern web development services web development services."
+  },
+  {
+    image: "/img/landing/problem-solving.png", 
+    alt: "Web Development",
+    title: "Fastest solutions",
+    description: "Modern web development services web development services"
+  },
+  {
+    image: "/img/landing/coverage.png", 
+    alt: "Web Development",
+    title: "Nationwide coverage",
+    description: "Modern web development services web development services."
+  },
 ];
 
 const ServiceCard = ({ image, alt, title, description }) => (
-  <div className="bg-white dark:bg-slate-800 rounded-xl shadow-md p-8 h-full flex flex-col items-center text-center transition hover:shadow-lg">
+  <div className=" p-8 h-full flex flex-col items-center text-center ">
     <div className="relative w-16 h-16 mb-6">
       <Image 
         src={image}
@@ -34,18 +52,18 @@ const ServiceCard = ({ image, alt, title, description }) => (
       />
     </div>
     <h3 className="text-xl font-bold mb-3">{title}</h3>
-    <p className="text-gray-600 dark:text-gray-300">{description}</p>
+    <p className="text-gray-600 ">{description}</p>
   </div>
 );
 
 const ServicesSection = () => {
   return (
-    <section className="py-12 bg-white dark:bg-gray-900">
+    <section className="py-12 bg-white ">
       <div className="container mx-auto px-4">
         
         <div className="max-w-2xl mx-auto text-center mb-12">
-          <p className="text-3xl md:text-4xl font-bold mb-4">
-            Quality services tailored to your needs
+          <p className="text-3xl md:text-4xl font-bold mb-4 text-gray-800 ">
+          Choose ABC as your logistics partner
           </p>
         </div>
 
