@@ -89,6 +89,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const clientReviews = [
+    
   {
     name: "Jhone Dehon",
     title: "CEO of Miracle",
