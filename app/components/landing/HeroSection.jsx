@@ -33,7 +33,7 @@ const HeroSection = () => {
             <div className="flex justify-center md:flex-none">
               <Image
                 className=" w-72 pt-5 md:pt-0 md:w-full "
-                src="https://steadfast.com.bd/landing-page/asset/images/rider.svg"
+                src="/img/2.png"
                 width={1000}
                 height={600}
                 alt="navimage"

@@ -24,7 +24,7 @@ const Navbar = () => {
           <div className="flex-shrink-0">
             <Image
               className="cursor-pointer w-28 md:w-52"
-              src="https://steadfast.com.bd/landing-page/asset/images/logo/logo.svg"
+              src="/img/logo.png"
               width={200}
               height={100}
               alt="navimage"
@@ -97,7 +97,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center mb-4 border-b pb-3 border-gray-300">
           <Image
             className="cursor-pointer"
-            src="https://steadfast.com.bd/landing-page/asset/images/logo/logo.svg"
+            src="/img/logo.png"
             width={150}
             height={70}
             alt="navimage"
