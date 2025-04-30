@@ -1,9 +1,10 @@
 import { FiUser, FiMail, FiLock, FiPhone } from "react-icons/fi";
 import { FaLocationDot } from "react-icons/fa6";
 import Image from "next/image";
+import Link from "next/link";
 const SignUp = () => {
   return (
-    <div className="pt-20 px-4">
+    <div className=" pt-20 px-4">
       <div className="min-h-screen flex flex-col items-center justify-center py-6">
         <div className="w-full md:w-[40%]">
           <a href="javascript:void(0)">
@@ -103,9 +104,12 @@ const SignUp = () => {
               </p>
               <p className="text-gray-800 text-lg font-medium text-center mt-10">
                 Already have an account?
-                <span className="font-semibold px-4 text-[#00b795] cursor-pointer">
-                  Login
-                </span>
+                <Link href="/landing/login">
+                  {" "}
+                  <span className="font-semibold px-2 text-[#00b795] cursor-pointer">
+                    Login
+                  </span>
+                </Link>
                 Here
               </p>
             </div>

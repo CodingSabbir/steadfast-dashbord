@@ -8,8 +8,20 @@ import HeroSection from "./components/landing/HeroSection";
 import ServicesSection from "./components/landing/ServiceCard";
 import TrackParcel from "./components/landing/TrackParcel";
 import LandingLayout from "./landing/layout";
-
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 export default function Home() {
+  const router = useRouter();
+
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, []);
   return (
     <LandingLayout>
         <HeroSection />

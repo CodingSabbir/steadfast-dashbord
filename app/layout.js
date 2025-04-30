@@ -16,7 +16,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${poppins.variable}`}>
+    <html lang="en" className={`${poppins.variable} "scroll-smooth"`}>
       <body cz-shortcut-listen="true">
         {children}
         </body>

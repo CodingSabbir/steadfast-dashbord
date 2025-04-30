@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
@@ -25,7 +26,7 @@ const HeroSection = () => {
             </p>
             <div className="text-center md:text-start">
               <button className="cursor-pointer px-7 py-3.5 bg-[#00b795]  font-semibold text-white text-[18px] rounded hover:bg-[#00b795] transition-all ">
-                Become a Merchant
+                <Link href="/landing/sign-up">Become a Merchant</Link>
               </button>
             </div>
           </div>

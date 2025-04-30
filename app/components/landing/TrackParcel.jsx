@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const TrackParcel = () => {
   return (
-    <div className="px-3 -mt-10">
+    <div className="px-3 -mt-10 scroll-mt-24" id="track_parcel">
       <div className="p-6 rounded-md mb-4 flex flex-col md:flex-row items-center justify-center border border-gray-300 md:w-[70%] container mx-auto bg-white">
         <div className="md:mr-7 mb-4 md:mb-0 text-center md:text-left">
           Track your parcel to get detailed update

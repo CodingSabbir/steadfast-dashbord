@@ -12,7 +12,7 @@ const Footer = () => {
       ],
     },
     {
-      title: "Products",
+      title: "Contact",
       links: [
         { name: "Figma UI System", url: "#" },
         { name: "Icons Assets", url: "#" },
@@ -45,8 +45,8 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="w-full  mt-16">
-      <div className="mx-auto container px-4 ">
+    <footer className="w-full  mt-16 scroll-mt-24 " id="about">
+      <div className="mx-auto container px-4 scroll-mt-24" id="contact">
         <div className="grid grid-cols-2 sm:grid-cols-5  gap-3 gap-y-8 md:gap-8 py-10 max-w-sm mx-auto sm:max-w-3xl lg:max-w-full">
           <div className="col-span-full mb-10 lg:col-span-2 lg:mb-0">
             <Image
@@ -83,7 +83,19 @@ const Footer = () => {
             <h4 className="text-gray-800 font-[600] text-[1.3rem] mb-4">
               Follow Us
             </h4>
-            <div className=" mb-4 flex flex-col items-center flex-wrap gap-5 justify-center">
+           
+            <div className="flex mt-4 space-x-4  lg:mt-0">
+              {socialLinks.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.url}
+                  className={`relative w-8 h-8 rounded-full transition-all duration-500 flex justify-center items-center ${social.bgColor} hover:bg-gray-900 text-white`}
+                >
+                  {social.icon}
+                </a>
+              ))}
+            </div>
+            <div className=" mt-4 flex flex-col items-center flex-wrap gap-5 justify-center">
               <button className="px-6 cursor-pointer bg-black rounded-md flex items-center gap-[17px]">
                 <Image
                   src="/img/app (1).png"
@@ -119,17 +131,6 @@ const Footer = () => {
                   </h3>
                 </div>
               </button>
-            </div>
-            <div className="flex mt-4 space-x-4  lg:mt-0">
-              {socialLinks.map((social, index) => (
-                <a
-                  key={index}
-                  href={social.url}
-                  className={`relative w-8 h-8 rounded-full transition-all duration-500 flex justify-center items-center ${social.bgColor} hover:bg-gray-900 text-white`}
-                >
-                  {social.icon}
-                </a>
-              ))}
             </div>
           </div>
         </div>

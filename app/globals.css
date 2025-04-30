@@ -1,2 +1,29 @@
 @import "tailwindcss";
+html {
+    scroll-behavior: smooth;
+  }
 
+  /* styles/globals.css */
+:root {
+    --primary-color: #00b795;
+    --secondary-color: #ffa242;
+    --dark-color: #222222;
+    --border-color: #d1d5db;
+  }
+  .bg-primary {
+    background-color: var(--primary-color);
+  }
+  .text-primary {
+    color: var(--primary-color);
+  }
+  .border-gray {
+    border-color: var(--border-color);
+  }
+  .button-primary {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .button-primary:hover {
+    background-color: #009f82; 
+  }
