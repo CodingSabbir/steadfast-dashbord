@@ -2,7 +2,7 @@ import { FiUser, FiMail, FiLock, FiPhone } from "react-icons/fi";
 import { FaLocationDot } from "react-icons/fa6";
 import Image from "next/image";
 import Link from "next/link";
-const SignUp = () => {
+const SignUp = ({dict}) => {
   return (
     <div className=" pt-20 px-4">
       <div className="min-h-screen flex flex-col items-center justify-center py-6">
@@ -18,14 +18,14 @@ const SignUp = () => {
           </a>
 
           <h2 className="text-gray-900 text-center text-3xl font-semibold">
-            Become a Merchant
+            {dict.signupPage.title}
           </h2>
 
           <div className="mt-12 space-y-6">
             <div className="relative flex items-center">
               <input
                 type="text"
-                placeholder="Your Business Name"
+                placeholder={dict.signupPage.nameLabelOne}
                 className="w-full text-gray-800 text-md border border-gray-300 px-4 py-3 rounded-md outline-[#00b795]"
               />
               <FiUser className="absolute right-4 text-gray-400" size={20} />
@@ -34,7 +34,7 @@ const SignUp = () => {
             <div className="relative flex items-center">
               <input
                 type="text"
-                placeholder="Your Name"
+                placeholder={dict.signupPage.nameLabelTwo}
                 className="w-full text-gray-800 text-md border border-gray-300 px-4 py-3 rounded-md outline-[#00b795]"
               />
               <FiUser className="absolute right-4 text-gray-400" size={20} />
@@ -42,7 +42,7 @@ const SignUp = () => {
 
             <div className="relative flex items-center">
               <textarea
-                placeholder="Address of our location"
+                placeholder={dict.signupPage.locationLabel}
                 rows="6"
                 className="w-full h-20 text-gray-800 text-md border border-gray-300 px-4 py-3 rounded-md outline-[#00b795]"
               />
@@ -55,7 +55,7 @@ const SignUp = () => {
             <div className="relative flex items-center">
               <input
                 type="email"
-                placeholder="Your Email"
+                placeholder={dict.signupPage.emailLabel}
                 className="w-full text-gray-800 text-md border border-gray-300 px-4 py-3 rounded-md outline-[#00b795]"
               />
               <FiMail className="absolute right-4 text-gray-400" size={20} />
@@ -64,7 +64,7 @@ const SignUp = () => {
             <div className="relative flex items-center">
               <input
                 type="text"
-                placeholder="Your Phone"
+                placeholder={dict.signupPage.phoneLabel}
                 className="w-full text-gray-800 text-md border border-gray-300 px-4 py-3 rounded-md outline-[#00b795]"
               />
               <FiPhone className="absolute right-4 text-gray-400" size={20} />
@@ -74,7 +74,7 @@ const SignUp = () => {
               <div className="relative flex items-center w-full">
                 <input
                   type="password"
-                  placeholder="Password"
+                  placeholder={dict.signupPage.passwordLabel}
                   className="w-full text-gray-800 text-md border border-gray-300 px-4 py-3 rounded-md outline-[#00b795]"
                 />
                 <FiLock className="absolute right-4 text-gray-400" size={20} />
@@ -82,7 +82,7 @@ const SignUp = () => {
               <div className="relative flex items-center w-full">
                 <input
                   type="password"
-                  placeholder="Confirm Password"
+                  placeholder={dict.signupPage.confirmPasswordLabel}
                   className="w-full text-gray-800 text-md border border-gray-300 px-4 py-3 rounded-md outline-[#00b795]"
                 />
                 <FiLock className="absolute right-4 text-gray-400" size={20} />
@@ -94,23 +94,23 @@ const SignUp = () => {
                 type="button"
                 className="w-full cursor-pointer py-2 px-4 text-[15px] font-medium tracking-wide rounded-md text-white bg-[#00b795] hover:bg-[#00a285] focus:outline-none"
               >
-                Sign Up
+                {dict.signupPage.signupButton}
               </button>
               <p className="text-gray-800 text-md text-center mt-1">
-                By clicking Sign Up you are agreeing with our{" "}
-                <span className="font-semibold text-gray-800 hover:text-[#00b795] cursor-pointer">
-                  Terms & Conditions
+              {dict.signupPage.accountLabelOne}
+                <span className="font-semibold text-gray-800 hover:text-[#00b795] px-1 cursor-pointer">
+                {dict.signupPage.accountLabelTwo}
                 </span>
               </p>
               <p className="text-gray-800 text-lg font-medium text-center mt-10">
-                Already have an account?
+              {dict.signupPage.existingAccount}
                 <Link href="/landing/login">
                   {" "}
                   <span className="font-semibold px-2 text-[#00b795] cursor-pointer">
-                    Login
+                  {dict.signupPage.loginLink}
                   </span>
                 </Link>
-                Here
+                
               </p>
             </div>
           </div>
