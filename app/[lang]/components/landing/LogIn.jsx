@@ -1,4 +1,3 @@
-
 // import { FiUser, FiMail, FiLock, FiPhone } from "react-icons/fi";
 // import { FaLocationDot } from "react-icons/fa6";
 // import Image from "next/image";
@@ -78,16 +77,13 @@
 
 // export default Login;
 
-
-
-
-
-"use client"
+"use client";
 
 import { useState } from "react";
 import { FiMail, FiLock } from "react-icons/fi";
 import Image from "next/image";
 import Link from "next/link";
+import LoginBtn from "./LoginBtn";
 
 const Login = ({ dict }) => {
   const [isChecked, setIsChecked] = useState(false);
@@ -134,47 +130,54 @@ const Login = ({ dict }) => {
             </div>
 
             <div className="mt-4">
-  <div className="flex items-center justify-between w-full">
-    <label className="flex items-center gap-2 cursor-pointer">
-      <input
-        type="checkbox"
-        className="hidden"
-        onChange={handleCheckboxChange}
-      />
-      {isChecked ? (
-        <svg
-          width="20"
-          height="20"
-          viewBox="0 0 20 20"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect width="20" height="20" rx="4" fill="#00b795" />
-          <path
-            d="M8.2 15.5c-.13 0-.26-.03-.38-.08s-.23-.13-.31-.23l-3.2-3.33a.89.89 0 0 1-.3-.63c0-.24.09-.47.26-.64a.92.92 0 0 1 .67-.28c.24 0 .47.09.64.26l2.49 2.6 6.09-6.35a.92.92 0 0 1 1.31-.01c.18.18.27.42.27.67s-.09.49-.26.66l-6.8 7.07a.89.89 0 0 1-.31.23c-.12.05-.25.08-.38.08z"
-            fill="white"
-          />
-        </svg>
-      ) : (
-        <svg
-          width="20"
-          height="20"
-          viewBox="0 0 20 20"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect width="20" height="20" rx="4" fill="transparent" stroke="#000" />
-        </svg>
-      )}
-      <span className="text-[14px] font-medium text-gray-700">{dict.loginPage.rememberMe}</span>
-    </label>
+              <div className="flex items-center justify-between w-full">
+                <label className="flex items-center gap-2 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    className="hidden"
+                    onChange={handleCheckboxChange}
+                  />
+                  {isChecked ? (
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect width="20" height="20" rx="4" fill="#00b795" />
+                      <path
+                        d="M8.2 15.5c-.13 0-.26-.03-.38-.08s-.23-.13-.31-.23l-3.2-3.33a.89.89 0 0 1-.3-.63c0-.24.09-.47.26-.64a.92.92 0 0 1 .67-.28c.24 0 .47.09.64.26l2.49 2.6 6.09-6.35a.92.92 0 0 1 1.31-.01c.18.18.27.42.27.67s-.09.49-.26.66l-6.8 7.07a.89.89 0 0 1-.31.23c-.12.05-.25.08-.38.08z"
+                        fill="white"
+                      />
+                    </svg>
+                  ) : (
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        width="20"
+                        height="20"
+                        rx="4"
+                        fill="transparent"
+                        stroke="#000"
+                      />
+                    </svg>
+                  )}
+                  <span className="text-[14px] font-medium text-gray-700">
+                    {dict.loginPage.rememberMe}
+                  </span>
+                </label>
 
-    <span className="text-[16px] font-semibold text-gray-400 cursor-pointer hover:text-[#00b795]">
-    {dict.loginPage.forgotPassword}
-    </span>
-  </div>
-</div>
-
+                <span className="text-[16px] font-semibold text-gray-400 cursor-pointer hover:text-[#00b795]">
+                  {dict.loginPage.forgotPassword}
+                </span>
+              </div>
+            </div>
 
             <div>
               <Link href="/dashboard">
@@ -186,17 +189,12 @@ const Login = ({ dict }) => {
                 </button>
               </Link>
 
-            
-
-              <p className="text-gray-800 text-lg font-medium text-center mt-5">
-              {dict.loginPage.noAccount}
-                <Link href="/landing/sign-up">
-                  <span className="font-semibold px-2 text-[#00b795] cursor-pointer">
-                  {dict.loginPage.signupLink}
-                  </span>
-                </Link>
-                
-              </p>
+              <div className="flex items-center mt-5 justify-center">
+                <p className="text-gray-800 text-lg font-medium text-center ">
+                  {dict.loginPage.noAccount}
+                </p>
+                <LoginBtn dict={dict} />
+              </div>
             </div>
           </div>
         </div>

@@ -7,3 +7,8 @@ const dictionaries = {
 }
  
 export const getDictionary = async (locale) => dictionaries[locale]()
+
+
+
+
+

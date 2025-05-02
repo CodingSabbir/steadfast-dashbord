@@ -1,49 +1,36 @@
-import React from "react";
 import Image from "next/image";
 
 const services = [
   {
-    image: "/img/landing/factory.png", 
+    image: "/img/landing/factory.png",
     alt: "Industry-leading tech",
-    title: "Industry-leading tech",
-    description: "Professional branding solutions for your business web development services."
   },
   {
-    image: "/img/landing/credit-card.png", 
+    image: "/img/landing/credit-card.png",
     alt: "Content Marketing",
-    title: "Next day payment",
-    description: "Strategic content to grow your audience web development services."
   },
   {
-    image: "/img/landing/good-feedback.png", 
+    image: "/img/landing/good-feedback.png",
     alt: "Web Development",
-    title: "Best COD rates",
-    description: "Modern web development services web development services."
   },
   {
-    image: "/img/landing/security.png", 
+    image: "/img/landing/security.png",
     alt: "Web Development",
-    title: "Secure handling",
-    description: "Modern web development services web development services."
   },
   {
-    image: "/img/landing/problem-solving.png", 
+    image: "/img/landing/problem-solving.png",
     alt: "Web Development",
-    title: "Fastest solutions",
-    description: "Modern web development services web development services"
   },
   {
-    image: "/img/landing/coverage.png", 
+    image: "/img/landing/coverage.png",
     alt: "Web Development",
-    title: "Nationwide coverage",
-    description: "Modern web development services web development services."
   },
 ];
 
 const ServiceCard = ({ image, alt, title, description }) => (
-  <div className=" p-8 h-full flex flex-col items-center text-center ">
+  <div className="p-8 h-full flex flex-col items-center text-center">
     <div className="relative w-16 h-16 mb-6">
-      <Image 
+      <Image
         src={image}
         alt={alt}
         fill
@@ -52,30 +39,30 @@ const ServiceCard = ({ image, alt, title, description }) => (
       />
     </div>
     <h3 className="text-xl font-bold mb-3">{title}</h3>
-    <p className="text-gray-600 ">{description}</p>
+    <p className="text-gray-600">{description}</p>
   </div>
 );
 
-const ServicesSection = () => {
+const ServicesSection = ({ dict }) => {
+  const section = dict.homePage.featuresSection;
+
   return (
-    <section className="py-12 bg-white ">
+    <section className="py-12 bg-white">
       <div className="container mx-auto px-4">
-        
         <div className="max-w-2xl mx-auto text-center mb-12">
-          <p className="text-3xl md:text-4xl font-bold mb-4 text-gray-800 ">
-          Choose ABC as your logistics partner
+          <p className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">
+            {section.title}
           </p>
         </div>
 
-     
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {services.map((service, index) => (
+          {section.features.map((feature, index) => (
             <ServiceCard
               key={index}
-              image={service.image}
-              alt={service.alt}
-              title={service.title}
-              description={service.description}
+              image={services[index]?.image || "/img/default.png"}
+              alt={services[index]?.alt || feature.title}
+              title={feature.title}
+              description={feature.description}
             />
           ))}
         </div>

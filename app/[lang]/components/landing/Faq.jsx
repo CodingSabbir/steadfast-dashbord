@@ -1,34 +1,9 @@
+'use client'
 import React, { useState } from "react";
 import { FaPlus } from "react-icons/fa6";
 import { MdOutlineArrowCircleRight } from "react-icons/md";
-const Accordion = () => {
-  const accordingData = [
-    {
-      title: "What is the purpose of wireframing in design?",
-      description:
-        "Wireframing outlines the basic structure and layout of a design, serving as a visual guide before detailed development.",
-    },
-    {
-      title: "Why is user-centered design important?",
-      description:
-        "User-centered design ensures products meet the needs and preferences of the end-users, enhancing usability and satisfaction.",
-    },
-    {
-      title: "What role does contrast play in graphic design?",
-      description:
-        "Contrast in graphic design emphasizes differences, making elements stand out and improving visual hierarchy.",
-    },
-    {
-      title: `Define the term "responsive design" in web development.`,
-      description:
-        "Responsive design ensures web pages adapt to various screen sizes, providing an optimal user experience on different devices.",
-    },
-    {
-      title: "What is the significance of color theory in design?",
-      description:
-        "Color theory guides the selection and combination of colors to evoke specific emotions, enhance readability, and create visually appealing designs.",
-    },
-  ];
+const Accordion = ({dict}) => {
+ 
 
   const [isPlusAccording, setIsPlusAccording] = useState(0);
 
@@ -39,21 +14,20 @@ const Accordion = () => {
     <div className="flex gap-3 flex-col w-full container mx-auto px-4 md:w-[70%]">
       <div className="text-gray-800 text-center">
         <h1 className="text-3xl md:text-4xl font-bold mb-4">
-          Still have questions? We have answers!
+      {  dict.homePage.faqSection.title}
         </h1>
         <p className="mt-2 mb-8">
-          Plan your shipments with ease as you estimate delivery costs
-          beforehand
+        {  dict.homePage.faqSection.description}
         </p>
       </div>
-      {accordingData?.map((according, index) => (
+      {dict.homePage.faqSection.questions.map((according, index) => (
         <article key={index} className="border border-[#e5eaf2] rounded p-3">
           <div
             className="flex gap-2 cursor-pointer items-center justify-between w-full"
             onClick={() => handleBorderClick(index)}
           >
             <h2 className="text-gray-800 font-[600] text-[1.2rem]">
-              {according.title}
+              {according.question}
             </h2>
             <p>
               <FaPlus
@@ -71,13 +45,13 @@ const Accordion = () => {
             }`}
           >
             <p className="text-[#424242] text-[16px] overflow-hidden">
-              {according.description}
+              {according.answer}
             </p>
           </div>
         </article>
       ))}
       <div className="flex gap-4 justify-center items-center text-[#00b795] py-5 cursor-pointer">
-        <p className="text-[16px] font-medium">See all our FAQs </p>
+        <p className="text-[16px] font-medium">       {  dict.homePage.faqSection.button}</p>
         <p>
           <MdOutlineArrowCircleRight className="text-2xl" />
         </p>

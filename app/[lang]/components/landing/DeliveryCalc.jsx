@@ -1,3 +1,4 @@
+'use client'
 import React, { useState } from "react";
 import { IoPlay } from "react-icons/io5";
 import { IoMdArrowDropdown } from "react-icons/io";
@@ -9,7 +10,7 @@ const areas = [
   { name: "Mymensingh", count: 4 },
 ];
 
-const Dropdown = ({ label, selected, setSelected }) => {
+const Dropdown = ({ label,dict, selected, setSelected }) => {
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState("");
 
@@ -19,7 +20,7 @@ const Dropdown = ({ label, selected, setSelected }) => {
 
   return (
     <div className="relative w-full">
-      <label className="text-gray-800">{label}</label>
+      <label className="text-gray-800">{dict}</label>
       <div
         onClick={() => setOpen(!open)}
         className="peer border-gray-300 border rounded-md outline-none px-4 py-3 w-full text-gray-800 cursor-pointer flex items-center justify-between"
@@ -62,7 +63,7 @@ const Dropdown = ({ label, selected, setSelected }) => {
   );
 };
 
-const DeliveryCalculator = () => {
+const DeliveryCalculator = ({dict}) => {
   const [pickupArea, setPickupArea] = useState("");
   const [deliveryArea, setDeliveryArea] = useState("");
 
@@ -72,17 +73,16 @@ const DeliveryCalculator = () => {
         <form className="w-full">
           <div className="text-gray-800 text-center">
             <h1 className="text-3xl md:text-4xl font-bold mb-4">
-              Delivery calculator
+              {dict.homePage.calculatorSection.title}
             </h1>
             <p className="mt-2 mb-8">
-              Plan your shipments with ease as you estimate delivery costs
-              beforehand
+            {dict.homePage.calculatorSection.description}
             </p>
           </div>
 
           <div className="flex sm:flex-row flex-col items-center gap-[20px]">
             <div className="flex flex-col gap-[5px] w-full sm:w-[50%] text-gray-800">
-              <label>Weight ( Upto 10kg )</label>
+              <label> {dict.homePage.calculatorSection.table.inputLabelOne}</label>
               <input
                 type="text"
                 placeholder="Enter Weight"
@@ -92,11 +92,12 @@ const DeliveryCalculator = () => {
                 label="Pickup Area"
                 selected={pickupArea}
                 setSelected={setPickupArea}
+                dict={dict.homePage.calculatorSection.table.inputLabelThree}
               />
             </div>
 
             <div className="flex flex-col gap-[5px] w-full sm:w-[50%] text-gray-800">
-              <label>Selling price of the product</label>
+              <label>{dict.homePage.calculatorSection.table.inputLabelTwo}</label>
               <input
                 type="text"
                 placeholder="Selling price of the product"
@@ -106,24 +107,24 @@ const DeliveryCalculator = () => {
                 label="Delivery Area"
                 selected={deliveryArea}
                 setSelected={setDeliveryArea}
+                dict={dict.homePage.calculatorSection.table.inputLabelFour}
               />
             </div>
           </div>
         </form>
         <div className="text-center pt-5 md:pt-10">
           <button className="cursor-pointer w-full md:w-56 px-7 py-3.5 bg-[#00b795]  font-semibold text-white text-[18px] rounded hover:bg-[#00b795] transition-all ">
-            Calculate price
+          {dict.homePage.calculatorSection.button}
           </button>
         </div>
         <div className="text-center">
           <p className="my-2 text-gray-800">
-            Plan your shipments with ease as you estimate delivery costs
-            beforehand
+          {dict.homePage.calculatorSection.note}
           </p>
           <p className="text-gray-800">
-            Check our{" "}
-            <span className="font-semibold text-[#00b795] cursor-pointer">
-              detailed list
+          {dict.homePage.calculatorSection.clickHearOne}
+            <span className="font-semibold text-[#00b795] px-1 cursor-pointer">
+            {dict.homePage.calculatorSection.clickHearTwo}
             </span>
           </p>
         </div>

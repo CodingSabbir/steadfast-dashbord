@@ -1,8 +1,9 @@
 import { FiUser, FiMail, FiLock, FiPhone } from "react-icons/fi";
 import { FaLocationDot } from "react-icons/fa6";
 import Image from "next/image";
-import Link from "next/link";
-const SignUp = ({dict}) => {
+
+import SignUpBtn from "./SignUpBtn";
+const SignUp = ({ dict }) => {
   return (
     <div className=" pt-20 px-4">
       <div className="min-h-screen flex flex-col items-center justify-center py-6">
@@ -97,21 +98,17 @@ const SignUp = ({dict}) => {
                 {dict.signupPage.signupButton}
               </button>
               <p className="text-gray-800 text-md text-center mt-1">
-              {dict.signupPage.accountLabelOne}
+                {dict.signupPage.accountLabelOne}
                 <span className="font-semibold text-gray-800 hover:text-[#00b795] px-1 cursor-pointer">
-                {dict.signupPage.accountLabelTwo}
+                  {dict.signupPage.accountLabelTwo}
                 </span>
               </p>
-              <p className="text-gray-800 text-lg font-medium text-center mt-10">
-              {dict.signupPage.existingAccount}
-                <Link href="/landing/login">
-                  {" "}
-                  <span className="font-semibold px-2 text-[#00b795] cursor-pointer">
-                  {dict.signupPage.loginLink}
-                  </span>
-                </Link>
-                
-              </p>
+              <div className="flex items-center mt-10 justify-center">
+                <p className="text-gray-800 text-lg font-medium text-center ">
+                  {dict.signupPage.existingAccount}
+                </p>
+                <SignUpBtn dict={dict} />
+              </div>
             </div>
           </div>
         </div>

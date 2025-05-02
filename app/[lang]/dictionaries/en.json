@@ -14,15 +14,19 @@
       "heroSection": {
         "title": "We Deliver",
         "subtitle": "Parcel on Time with no Hassle",
-        "description": "Easy Tracking, fast Payment, and safe Delivery across country."
+        "description": "Easy Tracking, fast Payment, and safe Delivery across country.",
+        "button": "Become a Merchant"
       },
       "statsSection": {
-        "title": "Classes & Members",
-        "numbers": "300K + 12K + 600 +"
+        
+        "numbersOne": "300K + ",
+        "numbersTwo": "12K +",
+        "numbersThree": " 600 +"
       },
-      "partnersSection": {
-        "title": "Our Partners",
-        "partners": ["TOD ENTERPRISES", "PayPal", "Improve", "QboF", "TOP SKIES"]
+      "trackParcelSection": {
+        "title": "Track your parcel to get detailed update",
+        "inputLabel": "Enter Tracking ID ",
+        "button": "Track Parcel"
       },
       "featuresSection": {
         "title": "Choose ABC as your logistics partner",
@@ -57,38 +61,74 @@
         "title": "Delivery calculator",
         "description": "Plan your alignment with view at your external delivery costs telefoneed.",
         "table": {
-          "headers": ["Weight (steps: 95g)", "Safety price of the product"],
-          "rows": [
-            ["Driver players", "Delivery done"],
-            ["Pledge does", "Select Delivery done"]
-          ]
+          "inputLabelOne": "Weight (steps: 10g)",
+          "inputLabelTwo": "Selling price of the product",
+          "inputLabelThree": "Pickup Area",
+          "inputLabelFour": "Delivery Area"
+         
         },
+        "button":" Calculate price",
+        "clickHearOne":"Check our ",
+        "clickHearTwo":"detailed list",
         "note": "Play your alignment with view at your external delivery costs telefoneed. Once new details fall."
       },
       "reviewsSection": {
-        "title": "Client Reviews",
-        "actions": ["Check", "Address", "COD in Country", "Select", "Browse", "Save"]
+    "title": "Client Reviews",
+    "reviews": [
+      {
+        "text": "Top notch quality and very responsive team. Helped us every step of the way.",
+        "author": "Olivia Johnson",
+        "position": "Director at Visionary Co."
       },
+      {
+        "text": "Top notch quality and very responsive team. Helped us every step of the way.",
+        "author": "Robert Brown",
+        "position": "CTO of Cloudify"
+      },
+      {
+        "text": "Top notch quality and very responsive team. Helped us every step of the way.",
+        "author": "Robert Brown",
+        "position": "CTO of Cloudify"
+      },
+      {
+        "text": "Top notch quality and very responsive team. Helped us every step of the way.",
+        "author": "Robert Brown",
+        "position": "CTO of Cloudify"
+      },
+      {
+        "text": "Top notch quality and very responsive team. Helped us every step of the way.",
+        "author": "Robert Brown",
+        "position": "CTO of Cloudify"
+      }
+    ]
+   
+  },
       "faqSection": {
         "title": "Still have questions? We have answers!",
         "description": "Plan your alignment with view at your external delivery costs telefoneed.",
+        "button": "See all our FAQs ",
         "questions": [
           {
             "question": "What is the purpose of whichmoving is design?",
             "answer": "We thinking a solution to basic structure and layout of a display, starting as a virtual guide before detailed development."
           },
           {
-            "question": "Why is user-centered design important?"
+            "question": "Why is user-centered design important?",
+             "answer": "We thinking "
           },
           {
-            "question": "What role does constant play in graphic design?"
+            "question": "What role does constant play in graphic design?",
+            "answer": "We thinking and layout of a display, "
           },
           {
-            "question": "Define the term 'repeatable design' in web development."
+            "question": "Define the term 'repeatable design' in web development.",
+            "answer": "structure and layout of a display, starting"
           },
           {
-            "question": "What is the significance of color theory in design?"
+            "question": "What is the significance of color theory in design?",
+            "answer": "We thinking the significance"
           }
+          
         ],
         "cta": "See all our tools"
       },

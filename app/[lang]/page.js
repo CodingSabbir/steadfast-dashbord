@@ -1,4 +1,4 @@
-"use client";
+
 
 import ClientReview from "./components/landing/ClientReview";
 import DeliveryCalculator from "./components/landing/DeliveryCalc";
@@ -8,29 +8,22 @@ import HeroSection from "./components/landing/HeroSection";
 import ServicesSection from "./components/landing/ServiceCard";
 import TrackParcel from "./components/landing/TrackParcel";
 import LandingLayout from "./landing/layout";
-import { useEffect } from "react";
-import { useRouter } from "next/navigation";
-export default function Home() {
-  const router = useRouter();
 
-  useEffect(() => {
-    const hash = window.location.hash;
-    if (hash) {
-      const element = document.querySelector(hash);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  }, []);
+
+
+
+import { getDictionary } from "./dictionaries/dictionaries";
+export default async function Home({params:{lang}}) {
+ const dict= await getDictionary(lang)
   return (
     <LandingLayout>
-        <HeroSection />
-        <TrackParcel />
+        <HeroSection dict={dict}/>
+        <TrackParcel dict={dict}/>
         <FeaturesLogo />
-        <ServicesSection/>
-        <DeliveryCalculator/>
-        <ClientReview/>
-        <Accordion/>
+        <ServicesSection dict={dict}/>
+        <DeliveryCalculator dict={dict}/>
+        <ClientReview dict={dict}/>
+        <Accordion dict={dict}/>
     </LandingLayout>
   );
 }
