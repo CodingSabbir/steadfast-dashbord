@@ -57,7 +57,7 @@ const Footer = () => {
               height={100}
               alt="footer-logo"
             />
-            <p className=" pt-4 md:py-8 text-[16px] text-gray-600 lg:max-w-xs ">
+            <p className=" pt-4 md:py-8 text-[16px] text-secondary lg:max-w-xs ">
               Trusted in more than 100 countries & 5 million customers. Have any
               query? million customers. Have any query?
             </p>
@@ -65,13 +65,13 @@ const Footer = () => {
 
           {footerLinks.map((section, index) => (
             <div key={index} className="lg:mx-auto text-left">
-              <h4 className="text-gray-800 font-[600] text-[1.3rem] mb-4">
+              <h4 className="text-primary font-[600] text-[1.3rem] mb-4">
                 {section.title}
               </h4>
               <ul className="text-sm transition-all duration-500">
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex} className="mb-6">
-                    <a href={link.url} className="text-gray-600 text-[16px]">
+                    <a href={link.url} className="text-secondary text-[16px]">
                       {link.name}
                     </a>
                   </li>
@@ -81,7 +81,7 @@ const Footer = () => {
           ))}
 
           <div className="lg:mx-auto text-left">
-            <h4 className="text-gray-800 font-[600] text-[1.3rem] mb-4">
+            <h4 className="text-primary font-[600] text-[1.3rem] mb-4">
               Follow Us
             </h4>
            
@@ -136,9 +136,9 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="py-7 border-t border-gray-200">
+        <div className="py-7 border-t border-gray">
           <div className="flex items-center justify-center ">
-            <span className="text-md text-gray-500">
+            <span className="text-md text-secondary">
               © <a href="#">abc</a> 2024, All rights reserved.
             </span>
           </div>

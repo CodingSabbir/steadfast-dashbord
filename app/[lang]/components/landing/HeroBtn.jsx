@@ -26,7 +26,7 @@ const HeroBtn = ({ dict }) => {
   };
   return (
     <div className="text-center md:text-start">
-      <button className="cursor-pointer px-7 py-3.5 bg-[#00b795]  font-semibold text-white text-[18px] rounded hover:bg-[#00b795] transition-all ">
+      <button className="cursor-pointer px-7 py-3.5 button-primary font-semibold text-white text-[18px] rounded hover:button-primary transition-all ">
         <Link href={`/${language}/landing/sign-up`}>
           {" "}
           {dict.homePage.heroSection.button}

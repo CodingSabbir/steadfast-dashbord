@@ -20,20 +20,20 @@ const Dropdown = ({ label,dict, selected, setSelected }) => {
 
   return (
     <div className="relative w-full">
-      <label className="text-gray-800">{dict}</label>
+      <label className="text-secondary">{dict}</label>
       <div
         onClick={() => setOpen(!open)}
-        className="peer border-gray-300 border rounded-md outline-none px-4 py-3 w-full text-gray-800 cursor-pointer flex items-center justify-between"
+        className="peer border-gray border rounded-md outline-none px-4 py-3 w-full text-secondary cursor-pointer flex items-center justify-between"
       >
         {selected || `Select ${label}`}
         <IoMdArrowDropdown />
       </div>
       {open && (
-        <div className="absolute top-[100%] left-0 w-full bg-white border border-gray-300 rounded-md mt-1 z-10 max-h-[250px] overflow-y-auto shadow-lg">
+        <div className="absolute top-[100%] left-0 w-full bg-white border border-gray rounded-md mt-1 z-10 max-h-[250px] overflow-y-auto shadow-lg">
           <input
             type="text"
             placeholder="Search area here"
-            className="w-full p-2 border-b border-gray-300 outline-none"
+            className="w-full p-2 border-b border-gray outline-none"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
@@ -48,12 +48,12 @@ const Dropdown = ({ label,dict, selected, setSelected }) => {
                 className="flex items-center justify-between p-3 hover:bg-gray-100 cursor-pointer"
               >
                 <div className="flex items-center gap-2">
-                  <span>{area.name}</span>
-                  <span className="text-white bg-[#00b795] px-2 py-0.5 rounded-full text-sm">
+                  <span className="text-primary">{area.name}</span>
+                  <span className="text-primary px-2 py-0.5 rounded-full text-sm">
                     {area.count}
                   </span>
                 </div>
-                <IoPlay className="text-[#00b795]" />
+                <IoPlay className="text-primary-active" />
               </li>
             ))}
           </ul>
@@ -71,22 +71,22 @@ const DeliveryCalculator = ({dict}) => {
     <section className=" grid grid-cols-1 gap-[30px] rounded-xl px-4 md:pb-10">
       <div className=" w-full md:w-[70%] container mx-auto">
         <form className="w-full">
-          <div className="text-gray-800 text-center">
-            <h1 className="text-3xl md:text-4xl font-bold mb-4">
+          <div className=" text-center">
+            <h1 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
               {dict.homePage.calculatorSection.title}
             </h1>
-            <p className="mt-2 mb-8">
+            <p className="mt-2 mb-8 text-secondary">
             {dict.homePage.calculatorSection.description}
             </p>
           </div>
 
           <div className="flex sm:flex-row flex-col items-center gap-[20px]">
-            <div className="flex flex-col gap-[5px] w-full sm:w-[50%] text-gray-800">
-              <label> {dict.homePage.calculatorSection.table.inputLabelOne}</label>
+            <div className="flex flex-col gap-[5px] w-full sm:w-[50%] ">
+              <label className="text-secondary"> {dict.homePage.calculatorSection.table.inputLabelOne}</label>
               <input
                 type="text"
                 placeholder="Enter Weight"
-                className="peer border-gray-300 border rounded-md outline-none px-4 py-3 w-full text-gray-400 transition-colors duration-300 mb-5"
+                className="peer border-gray border rounded-md outline-none px-4 py-3 w-full text-secondary transition-colors duration-300 mb-5"
               />
               <Dropdown
                 label="Pickup Area"
@@ -96,12 +96,12 @@ const DeliveryCalculator = ({dict}) => {
               />
             </div>
 
-            <div className="flex flex-col gap-[5px] w-full sm:w-[50%] text-gray-800">
-              <label>{dict.homePage.calculatorSection.table.inputLabelTwo}</label>
+            <div className="flex flex-col gap-[5px] w-full sm:w-[50%] ">
+              <label className="text-secondary">{dict.homePage.calculatorSection.table.inputLabelTwo}</label>
               <input
                 type="text"
                 placeholder="Selling price of the product"
-                className="peer border-gray-300 border rounded-md outline-none px-4 py-3 w-full text-gray-400 transition-colors duration-300 mb-5"
+                className="peer border-gray border rounded-md outline-none px-4 py-3 w-full text-secondary transition-colors duration-300 mb-5"
               />
               <Dropdown
                 label="Delivery Area"
@@ -113,17 +113,17 @@ const DeliveryCalculator = ({dict}) => {
           </div>
         </form>
         <div className="text-center pt-5 md:pt-10">
-          <button className="cursor-pointer w-full md:w-56 px-7 py-3.5 bg-[#00b795]  font-semibold text-white text-[18px] rounded hover:bg-[#00b795] transition-all ">
+          <button className="cursor-pointer w-full md:w-56 px-7 py-3.5 button-primary  font-semibold text-[18px] rounded  transition-all ">
           {dict.homePage.calculatorSection.button}
           </button>
         </div>
         <div className="text-center">
-          <p className="my-2 text-gray-800">
+          <p className="my-2 text-secondary">
           {dict.homePage.calculatorSection.note}
           </p>
-          <p className="text-gray-800">
+          <p className="text-secondary">
           {dict.homePage.calculatorSection.clickHearOne}
-            <span className="font-semibold text-[#00b795] px-1 cursor-pointer">
+            <span className="font-semibold text-primary-active px-1 cursor-pointer">
             {dict.homePage.calculatorSection.clickHearTwo}
             </span>
           </p>

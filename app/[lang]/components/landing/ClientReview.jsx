@@ -45,8 +45,8 @@ const ClientReview = ({ dict }) => {
 
   return (
     <div className="container mx-auto px-4 py-10">
-      <div className="text-gray-800 text-center">
-        <h1 className="text-3xl md:text-4xl font-bold mb-8">
+      <div className="text-center">
+        <h1 className="text-3xl md:text-4xl font-bold mb-8 text-primary">
           {reviewsSection.title}
         </h1>
       </div>
@@ -69,8 +69,8 @@ const ClientReview = ({ dict }) => {
       >
         {allReviews.map((review, idx) => (
           <SwiperSlide key={idx} className="md:pt-16">
-            <div className="bg-white p-6 rounded-lg relative border border-gray-300 h-full flex flex-col justify-between min-h-[350px]">
-              <FaQuoteLeft className="absolute top-4 left-4 text-[1.3rem] text-[#00b795]" />
+            <div className="bg-primary p-6 rounded-lg relative border border-gray h-full flex flex-col justify-between min-h-[350px]">
+              <FaQuoteLeft className="absolute top-4 left-4 text-[1.3rem] text-primary-active" />
 
               <div className="flex justify-center">
                 <img
@@ -83,14 +83,14 @@ const ClientReview = ({ dict }) => {
                 />
               </div>
 
-              <p className="text-[#424242] text-[0.9rem] mt-6 text-center">
+              <p className="text-secondary text-[0.9rem] mt-6 text-center">
                 {review.text}
               </p>
 
               <div className="flex items-start mt-5 justify-between">
                 <div>
-                  <h2 className="text-[1.2rem] font-[600]">{review.author}</h2>
-                  <p className="text-[1rem] text-[#727272]">{review.position}</p>
+                  <h2 className="text-[1.2rem] font-[600] text-primary">{review.author}</h2>
+                  <p className="text-[1rem] text-secondary">{review.position}</p>
                 </div>
                 <div className="flex items-center gap-1">
                   {Array.from({ length: 5 }).map((_, index) =>
@@ -109,7 +109,7 @@ const ClientReview = ({ dict }) => {
                 </div>
               </div>
 
-              <FaQuoteLeft className="absolute bottom-4 right-4 rotate-180 text-[1.3rem] text-[#00b795]" />
+              <FaQuoteLeft className="absolute bottom-4 right-4 rotate-180 text-[1.3rem] text-primary-active" />
             </div>
           </SwiperSlide>
         ))}

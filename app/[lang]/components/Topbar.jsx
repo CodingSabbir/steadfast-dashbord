@@ -19,20 +19,20 @@ const Topbar = ({ toggleSidebar, toggleMobileSearch, showMobileSearch }) => {
 
   const CheckBalanceButton = () => (
     <button
-      className="flex items-center gap-3 px-4 py-1.5 rounded-full border border-[#00b795] text-[#00b795] shadow-sm hover:shadow-md transition-all duration-300 bg-[#FAFAFA]"
+      className="flex items-center gap-3 px-4 py-1.5 rounded-full border border-[#00b795]  text-primary-active shadow-sm hover:shadow-md transition-all duration-300 bg-[#FAFAFA]"
       onClick={() => setBalanceClicked(!balanceClicked)}
     >
       {balanceClicked ? (
         <div className="flex justify-between items-center gap-16 md:gap-20 py-0.5">
-          <span className="font-semibold text-[#00b795] ">0 TK </span>
+          <span className="font-semibold  text-primary-active ">0 TK </span>
           <span className="text-[15px] bg-[#00b795] text-white rounded-full px-2.5 py-0.5">
             Details
           </span>
         </div>
       ) : (
         <>
-          <div className="w-8 h-8 flex items-center justify-center rounded-full bg-white shadow-inner border border-green-100">
-            <FaHandPointer className="text-[#00b795] text-lg" />
+          <div className="w-8 h-8 flex items-center justify-center rounded-full bg-primary shadow-inner border border-green-100">
+            <FaHandPointer className=" text-primary-active text-lg" />
           </div>
           <span className="font-medium">Check Balance</span>
         </>
@@ -41,7 +41,7 @@ const Topbar = ({ toggleSidebar, toggleMobileSearch, showMobileSearch }) => {
   );
 
   return (
-    <div className="bg-white px-5 py-8 shadow sticky top-0 z-10">
+    <div className="bg-primary px-5 py-8 shadow sticky top-0 z-10">
       <header className="flex justify-between items-center">
         <FaBars
           onClick={toggleSidebar}

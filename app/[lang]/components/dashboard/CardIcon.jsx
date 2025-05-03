@@ -15,7 +15,7 @@ const CardIcon = () => {
       {cardData.map((card, index) => (
         <div
           key={index}
-          className="bg-white p-4 border border-gray-300 rounded-lg cursor-pointer flex flex-col items-center "
+          className="bg-primary p-4 border border-gray rounded-lg cursor-pointer flex flex-col items-center "
         >
           <div className="bg-[#e0f7f9] p-2.5 rounded-xl flex items-center justify-center">
             <Image
@@ -26,7 +26,7 @@ const CardIcon = () => {
               height={32}
             />
           </div>
-          <h3 className="text-[13px] font-medium text-center pt-2 text-black">
+          <h3 className="text-[13px] font-medium text-center pt-2 text-primary">
             {card.title}
           </h3>
         </div>

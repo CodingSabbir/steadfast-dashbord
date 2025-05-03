@@ -15,7 +15,7 @@
 //           {/* Left - Logo and Mobile Menu Button */}
 //           <div className="flex items-center gap-4">
 //             <CiMenuFries
-//               className="text-[25px] text-black cursor-pointer md:hidden"
+//               className="text-[25px] text-primary cursor-pointer md:hidden"
 //               onClick={() => setMobileSidebarOpen(true)}
 //             />
 
@@ -34,17 +34,17 @@
 
 //           {/* Center - Desktop Navigation */}
 //           <div className="hidden md:flex flex-1 justify-center">
-//             <ul className="flex items-center gap-6 text-lg text-[#424242]">
-//               <li className="cursor-pointer font-medium text-black bg-success text-[16px] hover:text-[#00b795] transition-all">
+//             <ul className="flex items-center gap-6 text-lg text-secondary">
+//               <li className="cursor-pointer font-medium text-primary bg-success text-[16px] text-primary-hover transition-all">
 //                 <Link href="/"> Home</Link>
 //               </li>
-//               <li className="cursor-pointer font-medium text-black text-[16px] hover:text-[#00b795] transition-all">
+//               <li className="cursor-pointer font-medium text-primary text-[16px] text-primary-hover transition-all">
 //                 <Link href="/#about"> About</Link>
 //               </li>
-//               <li className="cursor-pointer font-medium text-black text-[16px] hover:text-[#00b795] transition-all">
+//               <li className="cursor-pointer font-medium text-primary text-[16px] text-primary-hover transition-all">
 //                 Services
 //               </li>
-//               <li className="cursor-pointer font-medium text-black text-[16px] hover:text-[#00b795] transition-all">
+//               <li className="cursor-pointer font-medium text-primary text-[16px] text-primary-hover transition-all">
 //                 <Link href="/#contact">Contact</Link>
 //               </li>
 //             </ul>
@@ -61,35 +61,35 @@
 //                 alt="navimage"
 //               />
 
-//               <li className="cursor-pointer list-none font-semibold text-[#00b795] text-[16px] hover:text-[#00b795] transition-all">
+//               <li className="cursor-pointer list-none font-semibold text-primary-active text-[16px] text-primary-hover transition-all">
 //                 <Link href="/#track_parcel">Track Parcel</Link>
 //               </li>
 //             </div>
 //             <Link href="/landing/login">
 //               {" "}
-//               <button className="cursor-pointer px-4 py-2 font-bold tracking-wider text-black text-[16px] hover:text-[#00b795] transition-all hidden md:block">
+//               <button className="cursor-pointer px-4 py-2 font-bold tracking-wider text-primary text-[16px] text-primary-hover transition-all hidden md:block">
 //                 Login
 //               </button>
 //             </Link>
 //             <Link href="/landing/sign-up">
 //               {" "}
-//               <button className="cursor-pointer px-4 py-2 font-bold tracking-wider bg-[#00b795] text-white rounded hover:bg-[#00b795] transition-all hidden md:block">
+//               <button className="cursor-pointer px-4 py-2 font-bold tracking-wider button-primary  rounded hover:button-primary transition-all hidden md:block">
 //                 Sign Up
 //               </button>
 //             </Link>
-//             <button className="cursor-pointer px-4 py-2 font-bold tracking-wider border border-[#00b795] bg-[#E5F7F4] text-[#00b795] rounded  transition-all hidden md:block">
+//             <button className="cursor-pointer px-4 py-2 font-bold tracking-wider border border-[#00b795] bg-[#E5F7F4] text-primary-active rounded  transition-all hidden md:block">
 //               EN
 //             </button>
 
 //             {/* Mobile Auth Buttons (Only visible on mobile) */}
 
 //             <Link href="/landing/login">
-//               <button className="cursor-pointer px-3 py-1 font-semibold text-black text-[18px] hover:text-[#00b795] transition-all md:hidden">
+//               <button className="cursor-pointer px-3 py-1 font-semibold text-primary text-[18px] text-primary-hover transition-all md:hidden">
 //                 Login
 //               </button>
 //             </Link>
 //             <Link href="/landing/sign-up">
-//               <button className="cursor-pointer px-3 py-1 bg-[#00b795]  font-semibold text-white text-[18px] rounded hover:bg-[#00b795] transition-all md:hidden">
+//               <button className="cursor-pointer px-3 py-1 button-primary  font-semibold  text-[18px] rounded hover:button-primary transition-all md:hidden">
 //                 Sign Up
 //               </button>
 //             </Link>
@@ -136,32 +136,32 @@
 
 //               <li
 //                 onClick={() => setMobileSidebarOpen(false)}
-//                 className="cursor-pointer block md:hidden font-medium text-[#00b795] text-[16px] hover:text-[#00b795] transition-all"
+//                 className="cursor-pointer block md:hidden font-medium text-primary-active text-[16px] text-primary-hover transition-all"
 //               >
 //                 <Link href="/#track_parcel"> Track Parcel </Link>
 //               </li>
 //             </div>
 //             <li
 //               onClick={() => setMobileSidebarOpen(false)}
-//               className="cursor-pointer font-medium tracking-wider text-black text-[16px] hover:text-[#00b795] transition-all"
+//               className="cursor-pointer font-medium tracking-wider text-primary text-[16px] text-primary-hover transition-all"
 //             >
 //               <Link href="/">Home</Link>
 //             </li>
 //             <li
 //               onClick={() => setMobileSidebarOpen(false)}
-//               className="cursor-pointer font-medium tracking-wider text-black text-[16px] hover:text-[#00b795] transition-all"
+//               className="cursor-pointer font-medium tracking-wider text-primary text-[16px] text-primary-hover transition-all"
 //             >
 //               <Link href="/#about">About</Link>
 //             </li>
 //             <li
 //               onClick={() => setMobileSidebarOpen(false)}
-//               className="cursor-pointer font-medium tracking-wider text-black text-[16px] hover:text-[#00b795] transition-all"
+//               className="cursor-pointer font-medium tracking-wider text-primary text-[16px] text-primary-hover transition-all"
 //             >
 //               Services
 //             </li>
 //             <li
 //               onClick={() => setMobileSidebarOpen(false)}
-//               className="cursor-pointer font-medium tracking-wider text-black text-[16px] hover:text-[#00b795] transition-all"
+//               className="cursor-pointer font-medium tracking-wider text-primary text-[16px] text-primary-hover transition-all"
 //             >
 //               <Link href="/#contact">Contact</Link>
 //             </li>
@@ -224,7 +224,7 @@
 //           {/* Left - Logo and Mobile Menu Button */}
 //           <div className="flex items-center gap-4">
 //             <CiMenuFries
-//               className="text-[25px] text-black cursor-pointer md:hidden"
+//               className="text-[25px] text-primary cursor-pointer md:hidden"
 //               onClick={() => setMobileSidebarOpen(true)}
 //             />
 //             <div className="flex-shrink-0">
@@ -242,17 +242,17 @@
 
 //           {/* Center - Desktop Navigation */}
 //           <div className="hidden md:flex flex-1 justify-center">
-//             <ul className="flex items-center gap-6 text-lg text-[#424242]">
-//               <li className="cursor-pointer font-medium text-black bg-success text-[16px] hover:text-[#00b795] transition-all">
+//             <ul className="flex items-center gap-6 text-lg text-secondary">
+//               <li className="cursor-pointer font-medium text-primary bg-success text-[16px] text-primary-hover transition-all">
 //                 <Link href="/"> home</Link> 
 //               </li>
-//               <li className="cursor-pointer font-medium text-black text-[16px] hover:text-[#00b795] transition-all">
+//               <li className="cursor-pointer font-medium text-primary text-[16px] text-primary-hover transition-all">
 //                 <Link href="/#about"> About</Link>
 //               </li>
-//               <li className="cursor-pointer font-medium text-black text-[16px] hover:text-[#00b795] transition-all">
+//               <li className="cursor-pointer font-medium text-primary text-[16px] text-primary-hover transition-all">
 //                 Services
 //               </li>
-//               <li className="cursor-pointer font-medium text-black text-[16px] hover:text-[#00b795] transition-all">
+//               <li className="cursor-pointer font-medium text-primary text-[16px] text-primary-hover transition-all">
 //                 <Link href="/#contact">Contact</Link>
 //               </li>
 //             </ul>
@@ -268,17 +268,17 @@
 //                 height={500}
 //                 alt="navimage"
 //               />
-//               <li className="cursor-pointer list-none font-semibold text-[#00b795] text-[16px] hover:text-[#00b795] transition-all">
+//               <li className="cursor-pointer list-none font-semibold text-primary-active text-[16px] text-primary-hover transition-all">
 //                 <Link href="/#track_parcel">Track Parcel</Link>
 //               </li>
 //             </div>
 //             <Link href={`/${language}/landing/login`}>
-//               <button className="cursor-pointer px-4 py-2 font-bold tracking-wider text-black text-[16px] hover:text-[#00b795] transition-all hidden md:block">
+//               <button className="cursor-pointer px-4 py-2 font-bold tracking-wider text-primary text-[16px] text-primary-hover transition-all hidden md:block">
 //                 Login
 //               </button>
 //             </Link>
 //             <Link href={`/${language}/landing/sign-up`}>
-//               <button className="cursor-pointer px-4 py-2 font-bold tracking-wider bg-[#00b795] text-white rounded hover:bg-[#00b795] transition-all hidden md:block">
+//               <button className="cursor-pointer px-4 py-2 font-bold tracking-wider button-primary  rounded hover:button-primary transition-all hidden md:block">
 //                 Sign Up
 //               </button>
 //             </Link>
@@ -286,19 +286,19 @@
 //             {/* Language Toggle Button */}
 //             <button
 //               onClick={toggleLanguage}
-//               className="cursor-pointer px-4 py-2 font-bold tracking-wider border border-[#00b795] bg-[#E5F7F4] text-[#00b795] rounded transition-all hidden md:block"
+//               className="cursor-pointer px-4 py-2 font-bold tracking-wider border border-[#00b795] bg-[#E5F7F4] text-primary-active rounded transition-all hidden md:block"
 //             >
 //               {language.toUpperCase()}
 //             </button>
 
 //             {/* Mobile Auth Buttons */}
 //             <Link href={`/${language}/landing/login`}>
-//               <button className="cursor-pointer px-3 py-1 font-semibold text-black text-[18px] hover:text-[#00b795] transition-all md:hidden">
+//               <button className="cursor-pointer px-3 py-1 font-semibold text-primary text-[18px] text-primary-hover transition-all md:hidden">
 //                 Login
 //               </button>
 //             </Link>
 //             <Link href={`/${language}/landing/sign-up`}>
-//               <button className="cursor-pointer px-3 py-1 bg-[#00b795] font-semibold text-white text-[18px] rounded hover:bg-[#00b795] transition-all md:hidden">
+//               <button className="cursor-pointer px-3 py-1 button-primary font-semibold  text-[18px] rounded hover:button-primary transition-all md:hidden">
 //                 Sign Up
 //               </button>
 //             </Link>
@@ -343,32 +343,32 @@
 //               />
 //               <li
 //                 onClick={() => setMobileSidebarOpen(false)}
-//                 className="cursor-pointer block md:hidden font-medium text-[#00b795] text-[16px] hover:text-[#00b795] transition-all"
+//                 className="cursor-pointer block md:hidden font-medium text-primary-active text-[16px] text-primary-hover transition-all"
 //               >
 //                 <Link href="/#track_parcel"> Track Parcel </Link>
 //               </li>
 //             </div>
 //             <li
 //               onClick={() => setMobileSidebarOpen(false)}
-//               className="cursor-pointer font-medium tracking-wider text-black text-[16px] hover:text-[#00b795] transition-all"
+//               className="cursor-pointer font-medium tracking-wider text-primary text-[16px] text-primary-hover transition-all"
 //             >
 //               <Link href="/">Home</Link>
 //             </li>
 //             <li
 //               onClick={() => setMobileSidebarOpen(false)}
-//               className="cursor-pointer font-medium tracking-wider text-black text-[16px] hover:text-[#00b795] transition-all"
+//               className="cursor-pointer font-medium tracking-wider text-primary text-[16px] text-primary-hover transition-all"
 //             >
 //               <Link href="/#about">About</Link>
 //             </li>
 //             <li
 //               onClick={() => setMobileSidebarOpen(false)}
-//               className="cursor-pointer font-medium tracking-wider text-black text-[16px] hover:text-[#00b795] transition-all"
+//               className="cursor-pointer font-medium tracking-wider text-primary text-[16px] text-primary-hover transition-all"
 //             >
 //               Services
 //             </li>
 //             <li
 //               onClick={() => setMobileSidebarOpen(false)}
-//               className="cursor-pointer font-medium tracking-wider text-black text-[16px] hover:text-[#00b795] transition-all"
+//               className="cursor-pointer font-medium tracking-wider text-primary text-[16px] text-primary-hover transition-all"
 //             >
 //               <Link href="/#contact">Contact</Link>
 //             </li>
@@ -428,7 +428,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="fixed top-0 left-0 w-full bg-white shadow-sm z-50 p-3">
+      <nav className="fixed top-0 left-0 w-full bg-primary shadow-sm z-50 p-3">
         <div className="flex items-center justify-between container mx-auto">
           {/* Left - Logo and Mobile Menu Button */}
           <div className="flex items-center gap-4">
@@ -451,17 +451,17 @@ const Navbar = () => {
 
           {/* Center - Desktop Navigation */}
           <div className="hidden md:flex flex-1 justify-center">
-            <ul className="flex items-center gap-6 text-lg text-[#424242]">
-              <li className="cursor-pointer font-medium text-black bg-success text-[16px] hover:text-[#00b795] transition-all">
+            <ul className="flex items-center gap-6 text-lg text-secondary">
+              <li className="cursor-pointer font-medium text-primary bg-success text-[16px] text-primary-hover transition-all">
                 <Link href="/"> Home</Link> 
               </li>
-              <li className="cursor-pointer font-medium text-black text-[16px] hover:text-[#00b795] transition-all">
+              <li className="cursor-pointer font-medium text-primary text-[16px] text-primary-hover transition-all">
                 <Link href="/#about"> About</Link>
               </li>
-              <li className="cursor-pointer font-medium text-black text-[16px] hover:text-[#00b795] transition-all">
+              <li className="cursor-pointer font-medium text-primary text-[16px] text-primary-hover transition-all">
                 Services
               </li>
-              <li className="cursor-pointer font-medium text-black text-[16px] hover:text-[#00b795] transition-all">
+              <li className="cursor-pointer font-medium text-primary text-[16px] text-primary-hover transition-all">
                 <Link href="/#contact">Contact</Link>
               </li>
             </ul>
@@ -477,17 +477,17 @@ const Navbar = () => {
                 height={500}
                 alt="navimage"
               />
-              <li className="cursor-pointer list-none font-semibold text-[#00b795] text-[16px] hover:text-[#00b795] transition-all">
+              <li className="cursor-pointer list-none font-semibold text-primary-active text-[16px] text-primary-hover transition-all">
                 <Link href="/#track_parcel">Track Parcel</Link>
               </li>
             </div>
             <Link href={`/${language}/landing/login`}>
-              <button className="cursor-pointer px-4 py-2 font-bold tracking-wider text-black text-[16px] hover:text-[#00b795] transition-all hidden md:block">
+              <button className="cursor-pointer px-4 py-2 font-bold tracking-wider text-primary text-[16px] text-primary-hover transition-all hidden md:block">
                 Login
               </button>
             </Link>
             <Link href={`/${language}/landing/sign-up`}>
-              <button className="cursor-pointer px-4 py-2 font-bold tracking-wider bg-[#00b795] text-white rounded hover:bg-[#00b795] transition-all hidden md:block">
+              <button className="cursor-pointer px-4 py-2 font-bold tracking-wider button-primary  rounded hover:button-primary transition-all hidden md:block">
                 Sign Up
               </button>
             </Link>
@@ -495,19 +495,19 @@ const Navbar = () => {
             {/* Language Toggle Button */}
             <button
               onClick={toggleLanguage}
-              className="cursor-pointer px-4 py-2 font-bold tracking-wider border border-[#00b795] bg-[#E5F7F4] text-[#00b795] rounded transition-all hidden md:block"
+              className="cursor-pointer px-4 py-2 font-bold tracking-wider border border-[#00b795] bg-[#E5F7F4] text-primary-active rounded transition-all hidden md:block"
             >
               {language.toUpperCase()}
             </button>
 
             {/* Mobile Auth Buttons */}
             <Link href={`/${language}/landing/login`}>
-              <button className="cursor-pointer px-3 py-1 font-semibold text-black text-[18px] hover:text-[#00b795] transition-all md:hidden">
+              <button className="cursor-pointer px-3 py-1 font-semibold text-primary text-[18px] text-primary-hover transition-all md:hidden">
                 Login
               </button>
             </Link>
             <Link href={`/${language}/landing/sign-up`}>
-              <button className="cursor-pointer px-3 py-1 bg-[#00b795] font-semibold text-white text-[18px] rounded hover:bg-[#00b795] transition-all md:hidden">
+              <button className="cursor-pointer px-3 py-1 button-primary font-semibold  text-[18px] rounded  transition-all md:hidden">
                 Sign Up
               </button>
             </Link>
@@ -552,32 +552,32 @@ const Navbar = () => {
               />
               <li
                 onClick={() => setMobileSidebarOpen(false)}
-                className="cursor-pointer block md:hidden font-medium text-[#00b795] text-[16px] hover:text-[#00b795] transition-all"
+                className="cursor-pointer block md:hidden font-medium text-primary-active text-[16px] text-primary-hover transition-all"
               >
                 <Link href="/#track_parcel"> Track Parcel </Link>
               </li>
             </div>
             <li
               onClick={() => setMobileSidebarOpen(false)}
-              className="cursor-pointer font-medium tracking-wider text-black text-[16px] hover:text-[#00b795] transition-all"
+              className="cursor-pointer font-medium tracking-wider text-primary text-[16px] text-primary-hover transition-all"
             >
               <Link href="/">Home</Link>
             </li>
             <li
               onClick={() => setMobileSidebarOpen(false)}
-              className="cursor-pointer font-medium tracking-wider text-black text-[16px] hover:text-[#00b795] transition-all"
+              className="cursor-pointer font-medium tracking-wider text-primary text-[16px] text-primary-hover transition-all"
             >
               <Link href="/#about">About</Link>
             </li>
             <li
               onClick={() => setMobileSidebarOpen(false)}
-              className="cursor-pointer font-medium tracking-wider text-black text-[16px] hover:text-[#00b795] transition-all"
+              className="cursor-pointer font-medium tracking-wider text-primary text-[16px] text-primary-hover transition-all"
             >
               Services
             </li>
             <li
               onClick={() => setMobileSidebarOpen(false)}
-              className="cursor-pointer font-medium tracking-wider text-black text-[16px] hover:text-[#00b795] transition-all"
+              className="cursor-pointer font-medium tracking-wider text-primary text-[16px] text-primary-hover transition-all"
             >
               <Link href="/#contact">Contact</Link>
             </li>

@@ -38,8 +38,8 @@ const ServiceCard = ({ image, alt, title, description }) => (
         sizes="(max-width: 768px) 64px, 80px"
       />
     </div>
-    <h3 className="text-xl font-bold mb-3">{title}</h3>
-    <p className="text-gray-600">{description}</p>
+    <h3 className="text-xl font-bold mb-3 text-primary">{title}</h3>
+    <p className="text-secondary">{description}</p>
   </div>
 );
 
@@ -50,7 +50,7 @@ const ServicesSection = ({ dict }) => {
     <section className="py-12 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto text-center mb-12">
-          <p className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">
+          <p className="text-3xl md:text-4xl font-bold mb-4 text-primary">
             {section.title}
           </p>
         </div>

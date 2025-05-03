@@ -46,7 +46,7 @@ const logoData = [
 
 const FeaturesLogo = () => {
   return (
-    <section className="bg-white  py-8">
+    <section className="bg-primary py-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-3 md:grid-cols-8 gap-4 items-center">
           {logoData.map((item, i) => {
@@ -56,7 +56,7 @@ const FeaturesLogo = () => {
                   key={i}
                   className="col-span-4 md:col-span-1 flex items-center justify-start md:justify-center"
                 >
-                  <h3 className="text-lg font-bold md:font-normal text-gray-500  whitespace-nowrap">
+                  <h3 className="text-lg font-bold md:font-normal text-secondary  whitespace-nowrap">
                     {item.text}
                   </h3>
                 </div>

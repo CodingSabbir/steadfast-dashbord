@@ -12,7 +12,7 @@ export default function LanguageToggle() {
       onClick={toggleLanguage}
       className="cursor-pointer px-2.5 py-2 rounded-full transition-all duration-300 bg-[#F5F5F5]"
     >
-      <p className="text-lg text-gray-600 transition-colors duration-200">
+      <p className="text-lg text-secondary transition-colors duration-200">
         {language}
       </p>
     </div>

@@ -12,27 +12,27 @@ const Accordion = ({dict}) => {
 
   return (
     <div className="flex gap-3 flex-col w-full container mx-auto px-4 md:w-[70%]">
-      <div className="text-gray-800 text-center">
-        <h1 className="text-3xl md:text-4xl font-bold mb-4">
+      <div className=" text-center">
+        <h1 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
       {  dict.homePage.faqSection.title}
         </h1>
-        <p className="mt-2 mb-8">
+        <p className="mt-2 mb-8 text-secondary">
         {  dict.homePage.faqSection.description}
         </p>
       </div>
       {dict.homePage.faqSection.questions.map((according, index) => (
-        <article key={index} className="border border-[#e5eaf2] rounded p-3">
+        <article key={index} className="border border-gray rounded p-3">
           <div
             className="flex gap-2 cursor-pointer items-center justify-between w-full"
             onClick={() => handleBorderClick(index)}
           >
-            <h2 className="text-gray-800 font-[600] text-[1.2rem]">
+            <h2 className="text-primary font-[600] text-[1.2rem]">
               {according.question}
             </h2>
             <p>
               <FaPlus
-                className={`text-[1.3rem] text-text transition-all duration-300 ${
-                  isPlusAccording === index && "rotate-[45deg] !text-[#00b795]"
+                className={`text-[1.3rem] text-text text-primary transition-all duration-300 ${
+                  isPlusAccording === index && "rotate-[45deg] text-primary-active"
                 }`}
               />
             </p>
@@ -44,14 +44,14 @@ const Accordion = ({dict}) => {
                 : "grid-rows-[0fr] opacity-0"
             }`}
           >
-            <p className="text-[#424242] text-[16px] overflow-hidden">
+            <p className="text-secondary text-[16px] overflow-hidden">
               {according.answer}
             </p>
           </div>
         </article>
       ))}
-      <div className="flex gap-4 justify-center items-center text-[#00b795] py-5 cursor-pointer">
-        <p className="text-[16px] font-medium">       {  dict.homePage.faqSection.button}</p>
+      <div className="flex gap-4 justify-center items-center text-primary-active py-5 cursor-pointer">
+        <p className="text-[16px] font-medium">{  dict.homePage.faqSection.button}</p>
         <p>
           <MdOutlineArrowCircleRight className="text-2xl" />
         </p>

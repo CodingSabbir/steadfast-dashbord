@@ -37,11 +37,11 @@ const Sidebar = ({ isOpen, onClose }) => {
       )}
 
       <aside
-        className={`fixed top-0 left-0 h-full bg-white shadow transition-all duration-300 z-30 
+        className={`fixed top-0 left-0 h-full bg-primary shadow transition-all duration-300 z-30 
         ${isOpen ? "w-64" : "hidden md:block md:w-16"} flex flex-col`}
       >
         <div
-          className={`border-b border-gray-300 mx-3 pb-3 ${
+          className={`border-b border-gray mx-3 pb-3 ${
             isOpen
               ? "flex gap-2 items-center md:flex-col mt-4"
               : "flex flex-col items-center mt-4"
@@ -60,10 +60,10 @@ const Sidebar = ({ isOpen, onClose }) => {
           </div>
           {isOpen && (
             <>
-              <h2 className="text-center font-semibold text-black text-[18px]">
+              <h2 className="text-center font-semibold text-primary text-[18px]">
                 Sabbir
               </h2>
-              <p className="text-[16px] text-center text-[#a3a3a3]">
+              <p className="text-[16px] text-center ">
                 ID: 1456975
               </p>
             </>
@@ -81,7 +81,7 @@ const Sidebar = ({ isOpen, onClose }) => {
           `}</style>
 
           {isOpen && (
-            <h1 className="px-4 text-[16px] font-normal uppercase text-[#a3a3a3] mt-4 pb-2">
+            <h1 className="px-4 text-[16px] text-secondary font-normal uppercase  mt-4 pb-2">
               main menu
             </h1>
           )}
@@ -96,7 +96,7 @@ const Sidebar = ({ isOpen, onClose }) => {
                   ${
                     isActive
                       ? "bg-[#e5f7f4] !text-[#00b795] font-semibold border-l-4 border-[#00b795]"
-                      : "text-gray-600 hover:bg-[#e5f7f4] hover:text-[#00b795]"
+                      : "text-primary hover:bg-[#e5f7f4] text-primary-hover"
                   }`}
               >
                 <Icon
@@ -105,7 +105,7 @@ const Sidebar = ({ isOpen, onClose }) => {
                   }`}
                 />
                 {isOpen && (
-                  <span className="text-[16px] capitalize">{label}</span>
+                  <span className="text-[16px] capitalize text-primary">{label}</span>
                 )}
               </Link>
             );
