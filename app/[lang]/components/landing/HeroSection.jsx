@@ -27,7 +27,7 @@ const HeroSection = ({ dict }) => {
                 src="/img/2.png"
                 width={1000}
                 height={600}
-                alt="navimage"
+                alt="hero-img"
               />
             </div>
           </div>
