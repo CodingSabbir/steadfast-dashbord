@@ -56,16 +56,16 @@ const Navbar = () => {
           {/* Center: Navigation */}
           <div className="hidden md:flex flex-1 justify-center">
             <ul className="flex items-center gap-6 text-lg text-secondary">
-              <Link href="/" className="cursor-pointer font-medium text-primary text-[16px] hover:text-success transition-all">
+              <Link href="/"  className="cursor-pointer font-medium text-primary text-[16px] hover:text-success transition-all" prefetch>
                 {tMenu('home')}
               </Link>
-              <Link href="/#about" className="cursor-pointer font-medium text-primary text-[16px] hover:text-success transition-all">
+              <Link href="/#about" className="cursor-pointer font-medium text-primary text-[16px] hover:text-success transition-all" prefetch>
                {tMenu('about')}
               </Link>
-              <Link href="#" className="cursor-pointer font-medium text-primary text-[16px] hover:text-success transition-all">
+              <Link href="#" className="cursor-pointer font-medium text-primary text-[16px] hover:text-success transition-all" prefetch>
                 {tMenu('services')}
               </Link>
-              <Link href="/#contact" className="cursor-pointer font-medium text-primary text-[16px] hover:text-success transition-all">
+              <Link href="/#contact" className="cursor-pointer font-medium text-primary text-[16px] hover:text-success transition-all" prefetch>
                 {tMenu('contact')}
               </Link>
             </ul>
@@ -88,12 +88,12 @@ const Navbar = () => {
             </div>
 
             {/* Auth (Desktop only) */}
-            <Link href="/landing/login">
+            <Link href="/landing/login" prefetch>
               <button className="px-4 py-2 cursor-pointer font-bold text-primary text-[16px] hover:text-success transition-all hidden md:block">
                 {tMenu('login')}
               </button>
             </Link>
-            <Link href="/landing/sign-up">
+            <Link href="/landing/sign-up" prefetch>
               <button className="px-4 py-2 cursor-pointer font-bold button-primary rounded hover:brightness-105 transition-all hidden md:block">
                {tMenu('signup')}
               </button>
