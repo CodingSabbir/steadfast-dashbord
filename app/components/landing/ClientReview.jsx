@@ -3,6 +3,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import { FaQuoteLeft, FaRegStar, FaStar } from "react-icons/fa";
+import { useTranslations } from "next-intl";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -16,38 +17,33 @@ const defaultClientImages = [
   "https://randomuser.me/api/portraits/men/55.jpg",
 ];
 
-const ClientReview = ({ dict }) => {
-  // Get reviews from dictionary with fallback
-  const reviewsSection = dict?.homePage?.reviewsSection || {
-    title: "Client Reviews",
-    reviews: []
-  };
+const ClientReview = () => {
+  const t = useTranslations("homePage.reviewsSection");
 
-  // Combine dictionary reviews with images and ratings
-  const combinedReviews = reviewsSection.reviews.map((review, index) => ({
+  
+  const reviews = t.raw("reviews"); 
+
+  const combinedReviews = reviews.map((review, index) => ({
     ...review,
     image: defaultClientImages[index % defaultClientImages.length],
-    rating: index % 2 === 0 ? 4 : 5, // Alternate between 4 and 5 stars
-    name: review.author, // Map author to name
-    position: review.position
+    rating: index % 2 === 0 ? 4 : 5,
   }));
 
-  // Use combined reviews or fallback if empty
-  const allReviews = combinedReviews.length > 0 
-    ? combinedReviews 
+  const allReviews = combinedReviews.length > 0
+    ? combinedReviews
     : [{
         text: "No reviews available",
         author: "Admin",
         position: "System",
         image: "https://randomuser.me/api/portraits/lego/1.jpg",
-        rating: 5
+        rating: 5,
       }];
 
   return (
     <div className="container mx-auto px-4 py-10">
       <div className="text-center">
         <h1 className="text-3xl md:text-4xl font-bold mb-8 text-primary">
-          {reviewsSection.title}
+          {t("title")}
         </h1>
       </div>
 
@@ -78,7 +74,7 @@ const ClientReview = ({ dict }) => {
                   alt={review.author}
                   className="w-[100px] h-[100px] object-cover rounded-full border-4 border-gray-800"
                   onError={(e) => {
-                    e.target.src = "https://randomuser.me/api/portraits/lego/1.jpg";
+                    e.currentTarget.src = "https://randomuser.me/api/portraits/lego/1.jpg";
                   }}
                 />
               </div>
@@ -89,21 +85,15 @@ const ClientReview = ({ dict }) => {
 
               <div className="flex items-start mt-5 justify-between">
                 <div>
-                  <h2 className="text-[1.2rem] font-[600] text-primary">{review.author}</h2>
+                  <h2 className="text-[1.2rem] font-[600] text-white">{review.author}</h2>
                   <p className="text-[1rem] text-secondary">{review.position}</p>
                 </div>
                 <div className="flex items-center gap-1">
                   {Array.from({ length: 5 }).map((_, index) =>
                     index < review.rating ? (
-                      <FaStar
-                        key={index}
-                        className="text-[1.3rem] text-[#ffba24]"
-                      />
+                      <FaStar key={index} className="text-[1.3rem] text-[#ffba24]" />
                     ) : (
-                      <FaRegStar
-                        key={index}
-                        className="text-[1.3rem] text-[#ffba24]"
-                      />
+                      <FaRegStar key={index} className="text-[1.3rem] text-[#ffba24]" />
                     )
                   )}
                 </div>

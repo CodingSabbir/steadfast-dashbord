@@ -1,23 +1,25 @@
-
 import Image from "next/image";
 import { FaTwitter, FaInstagram, FaFacebook, FaYoutube } from "react-icons/fa";
+import { useTranslations } from "next-intl";
 
 const Footer = () => {
+  const tFooter = useTranslations("homePage.footer");
+
   const footerLinks = [
     {
       title: "Pagedone",
       links: [
-        { name: "Home", url: "#" },
-        { name: "About", url: "#" },
-        { name: "Pricing", url: "#" },
+        { name: tFooter("links.0"), url: "#" },
+        { name: tFooter("links.1"), url: "#" },
+        { name: tFooter("links.2"), url: "#" },
       ],
     },
     {
       title: "Contact",
       links: [
-        { name: "Figma UI System", url: "#" },
-        { name: "Icons Assets", url: "#" },
-        { name: "Responsive Blocks", url: "#" },
+        { name: tFooter("links.3"), url: "#" },
+        { name: tFooter("links.4"), url: "#" },
+        { name: tFooter("links.5"), url: "#" },
       ],
     },
   ];
@@ -46,9 +48,9 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="w-full  mt-16 scroll-mt-24 " id="about">
+    <footer className="w-full mt-16 scroll-mt-24" id="about">
       <div className="mx-auto container px-4 scroll-mt-24" id="contact">
-        <div className="grid grid-cols-2 sm:grid-cols-5  gap-3 gap-y-8 md:gap-8 py-10 max-w-sm mx-auto sm:max-w-3xl lg:max-w-full">
+        <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 gap-y-8 md:gap-8 py-10 max-w-sm mx-auto sm:max-w-3xl lg:max-w-full">
           <div className="col-span-full mb-10 lg:col-span-2 lg:mb-0">
             <Image
               className="cursor-pointer w-28 md:w-52"
@@ -57,9 +59,8 @@ const Footer = () => {
               height={100}
               alt="footer-logo"
             />
-            <p className=" pt-4 md:py-8 text-[16px] text-secondary lg:max-w-xs ">
-              Trusted in more than 100 countries & 5 million customers. Have any
-              query? million customers. Have any query?
+            <p className="pt-4 md:py-8 text-[16px] text-secondary lg:max-w-xs">
+              {tFooter("description")}
             </p>
           </div>
 
@@ -82,10 +83,10 @@ const Footer = () => {
 
           <div className="lg:mx-auto text-left">
             <h4 className="text-primary font-[600] text-[1.3rem] mb-4">
-              Follow Us
+              {tFooter("social")}
             </h4>
-           
-            <div className="flex mt-4 space-x-4  lg:mt-0">
+
+            <div className="flex mt-4 space-x-4 lg:mt-0">
               {socialLinks.map((social, index) => (
                 <a
                   key={index}
@@ -96,7 +97,8 @@ const Footer = () => {
                 </a>
               ))}
             </div>
-            <div className=" mt-4 flex flex-col items-center flex-wrap gap-5 justify-center">
+
+            <div className="mt-4 flex flex-col items-center flex-wrap gap-5 justify-center">
               <button className="px-6 cursor-pointer bg-black rounded-md flex items-center gap-[17px]">
                 <Image
                   src="/img/app (1).png"
@@ -115,10 +117,10 @@ const Footer = () => {
                 </div>
               </button>
 
-              <button className="px-6  cursor-pointer border border-[#424242] rounded-md flex items-center gap-[17px]">
+              <button className="px-6 cursor-pointer border border-[#424242] rounded-md flex items-center gap-[17px]">
                 <Image
                   src="/img/app (2).png"
-                  alt="apple logo"
+                  alt="google play logo"
                   className="w-[30px]"
                   width={500}
                   height={500}
@@ -128,7 +130,7 @@ const Footer = () => {
                     Download on the
                   </span>
                   <h3 className="text-[0.9rem] font-[500] leading-[20px] mb-2">
-                    AppStore
+                    PlayStore
                   </h3>
                 </div>
               </button>
@@ -137,9 +139,9 @@ const Footer = () => {
         </div>
 
         <div className="py-7 border-t border-gray">
-          <div className="flex items-center justify-center ">
+          <div className="flex items-center justify-center">
             <span className="text-md text-secondary">
-              © <a href="#">abc</a> 2024, All rights reserved.
+              <a href="#"> {tFooter('copyRight')}</a> 
             </span>
           </div>
         </div>
@@ -149,8 +151,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-
-
-
-

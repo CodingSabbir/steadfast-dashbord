@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { IoPlay } from "react-icons/io5";
 import { IoMdArrowDropdown } from "react-icons/io";
+import { useTranslations } from "next-intl";
 const areas = [
   { name: "Barisal", count: 6 },
   { name: "Chittagong", count: 11 },
@@ -63,26 +64,27 @@ const Dropdown = ({ label,dict, selected, setSelected }) => {
   );
 };
 
-const DeliveryCalculator = ({dict}) => {
+const DeliveryCalculator = () => {
   const [pickupArea, setPickupArea] = useState("");
   const [deliveryArea, setDeliveryArea] = useState("");
-
+ const tDeliveryCalculator = useTranslations('homePage.calculatorSection');
+ const tTable = useTranslations('homePage.calculatorSection.table');
   return (
     <section className=" grid grid-cols-1 gap-[30px] rounded-xl px-4 md:pb-10">
       <div className=" w-full md:w-[70%] container mx-auto">
         <form className="w-full">
           <div className=" text-center">
             <h1 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
-              {dict.homePage.calculatorSection.title}
+              {tDeliveryCalculator('title')}
             </h1>
             <p className="mt-2 mb-8 text-secondary">
-            {dict.homePage.calculatorSection.description}
+             {tDeliveryCalculator('description')}
             </p>
           </div>
 
           <div className="flex sm:flex-row flex-col items-center gap-[20px]">
             <div className="flex flex-col gap-[5px] w-full sm:w-[50%] ">
-              <label className="text-secondary"> {dict.homePage.calculatorSection.table.inputLabelOne}</label>
+              <label className="text-secondary">  {tTable('inputLabelOne')}</label>
               <input
                 type="text"
                 placeholder="Enter Weight"
@@ -92,12 +94,12 @@ const DeliveryCalculator = ({dict}) => {
                 label="Pickup Area"
                 selected={pickupArea}
                 setSelected={setPickupArea}
-                dict={dict.homePage.calculatorSection.table.inputLabelThree}
+                dict={tTable('inputLabelThree')}
               />
             </div>
 
             <div className="flex flex-col gap-[5px] w-full sm:w-[50%] ">
-              <label className="text-secondary">{dict.homePage.calculatorSection.table.inputLabelTwo}</label>
+              <label className="text-secondary">{tTable('inputLabelTwo')}</label>
               <input
                 type="text"
                 placeholder="Selling price of the product"
@@ -107,24 +109,24 @@ const DeliveryCalculator = ({dict}) => {
                 label="Delivery Area"
                 selected={deliveryArea}
                 setSelected={setDeliveryArea}
-                dict={dict.homePage.calculatorSection.table.inputLabelFour}
+                dict={tTable('inputLabelFour')}
               />
             </div>
           </div>
         </form>
         <div className="text-center pt-5 md:pt-10">
-          <button className="cursor-pointer w-full md:w-56 px-7 py-3.5 button-primary  font-semibold text-[18px] rounded  transition-all ">
-          {dict.homePage.calculatorSection.button}
+          <button className="cursor-pointer w-full md:w-60 px-7 py-3.5 button-primary  font-semibold text-[18px] rounded  transition-all ">
+          {tDeliveryCalculator('button')}
           </button>
         </div>
         <div className="text-center">
           <p className="my-2 text-secondary">
-          {dict.homePage.calculatorSection.note}
+          {tDeliveryCalculator('note')}
           </p>
           <p className="text-secondary">
-          {dict.homePage.calculatorSection.clickHearOne}
+       {tDeliveryCalculator('clickHearOne')}
             <span className="font-semibold text-primary-active px-1 cursor-pointer">
-            {dict.homePage.calculatorSection.clickHearTwo}
+             {tDeliveryCalculator('clickHearTwo')}
             </span>
           </p>
         </div>

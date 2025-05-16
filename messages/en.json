@@ -136,7 +136,8 @@
         "brand": "@PACKHEXA",
         "description": "Passed to ensure these COD constraints & a reduction assessment will apply every million customers. Have any option?",
         "links": ["Pagedone", "Power", "Abuse", "Pricing", "Contact", "Payment To System", "Name/Assess", "Responsive Needs"],
-        "social": "Follow Us"
+        "social": "Follow Us",
+         "copyRight": "© abc 2024, All rights reserved."
       }
     },
     "loginPage": {

@@ -1,7 +1,10 @@
 import Image from "next/image";
 import HeroBtn from "./HeroBtn";
+import { useTranslations } from "next-intl";
 
-const HeroSection = ({ dict }) => {
+const HeroSection = () => {
+   const t = useTranslations('homePage.heroSection');
+   const tStatsSection = useTranslations('homePage.statsSection');
   return (
     <div className=" h-[800px] md:h-[750px] bg-teal-100 mt-10">
       <div className="container mx-auto pt-10 md:pt-16 ">
@@ -9,16 +12,16 @@ const HeroSection = ({ dict }) => {
           <div className="col-span-2  md:pt-10">
             <div className="text-center md:text-start">
               <h2 className=" text-[32px] md:text-[40px] text-primary tracking-wide font-bold leading-none">
-                {dict.homePage.heroSection.title}
+                {t('title')}
               </h2>
               <h2 className="text-[32px] md:text-[40px] text-primary tracking-wide font-bold leading-none py-3">
-                {dict.homePage.heroSection.subtitle}
+             {t('subtitle')}
               </h2>
             </div>
             <p className="text-secondary leading-[24px] text-center md:text-start px-4 md:px-0 text-[17px] md:text-[20px] py-7 md:py-10">
-              {dict.homePage.heroSection.description}
+    {t('description')}
             </p>
-            <HeroBtn dict={dict} />
+            <HeroBtn  />
           </div>
           <div className="col-span-2 ">
             <div className="flex justify-center md:flex-none">
@@ -44,7 +47,7 @@ const HeroSection = ({ dict }) => {
               </div>
               <div>
                 <h2 className="leading-[28px] font-semibold text-[36px]">
-                  {dict.homePage.statsSection.numbersOne}
+                {tStatsSection('numbersOne')}
                 </h2>
                 <p className="mt-1 text-secondary">Registered Merchant</p>
               </div>
@@ -62,7 +65,7 @@ const HeroSection = ({ dict }) => {
               </div>
               <div>
                 <h2 className="leading-[28px] font-semibold text-[36px]">
-                  {dict.homePage.statsSection.numbersTwo}
+               {tStatsSection('numbersTwo')}
                 </h2>
                 <p className="mt-1 text-secondary">Delivery Man</p>
               </div>
@@ -80,7 +83,7 @@ const HeroSection = ({ dict }) => {
               </div>
               <div>
                 <h2 className="leading-[28px] font-semibold text-[36px]">
-                  {dict.homePage.statsSection.numbersThree}
+                {tStatsSection('numbersThree')}
                 </h2>
                 <p className="mt-1 text-secondary">Delivery Point</p>
               </div>

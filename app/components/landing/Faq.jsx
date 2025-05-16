@@ -2,9 +2,11 @@
 import React, { useState } from "react";
 import { FaPlus } from "react-icons/fa6";
 import { MdOutlineArrowCircleRight } from "react-icons/md";
-const Accordion = ({dict}) => {
+import { useTranslations } from "next-intl";
+const Accordion = () => {
  
-
+const tfaqSection = useTranslations("homePage.faqSection");
+const questions = tfaqSection.raw("questions"); 
   const [isPlusAccording, setIsPlusAccording] = useState(0);
 
   const handleBorderClick = (index) =>
@@ -14,13 +16,13 @@ const Accordion = ({dict}) => {
     <div className="flex gap-3 flex-col w-full container mx-auto px-4 md:w-[70%]">
       <div className=" text-center">
         <h1 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
-      {  dict.homePage.faqSection.title}
+        {tfaqSection('title')}
         </h1>
         <p className="mt-2 mb-8 text-secondary">
-        {  dict.homePage.faqSection.description}
+         {tfaqSection('description')}
         </p>
       </div>
-      {dict.homePage.faqSection.questions.map((according, index) => (
+      {questions.map((according, index) => (
         <article key={index} className="border border-gray rounded p-3">
           <div
             className="flex gap-2 cursor-pointer items-center justify-between w-full"
@@ -51,7 +53,7 @@ const Accordion = ({dict}) => {
         </article>
       ))}
       <div className="flex gap-4 justify-center items-center text-primary-active py-5 cursor-pointer">
-        <p className="text-[16px] font-medium">{  dict.homePage.faqSection.button}</p>
+        <p className="text-[16px] font-medium"> {tfaqSection('button')}</p>
         <p>
           <MdOutlineArrowCircleRight className="text-2xl" />
         </p>

@@ -1,6 +1,7 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
-
+import { NextIntlClientProvider } from "next-intl";
+import { getLocale, getMessages } from "next-intl/server";
 
 const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700"],
@@ -14,11 +15,15 @@ export const metadata = {
   description: "The dashboard interface",
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  const locale = await getLocale();
+  const messages = await getMessages();
   return (
-    <html lang="en" className={`${poppins.variable} "scroll-smooth"`}>
+    <html lang={locale} className={`${poppins.variable} "scroll-smooth"`}>
       <body cz-shortcut-listen="true">
+        <NextIntlClientProvider messages={messages}>
         {children}
+        </NextIntlClientProvider>
         </body>
     </html>
   );

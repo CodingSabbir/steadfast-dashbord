@@ -11,19 +11,17 @@ import LandingLayout from "./landing/layout";
 
 
 
+export default  function Home() {
 
-import { getDictionary } from "./dictionaries/dictionaries";
-export default async function Home({params:{lang}}) {
- const dict= await getDictionary(lang)
   return (
     <LandingLayout>
-        <HeroSection dict={dict}/>
-        <TrackParcel dict={dict}/>
+        <HeroSection />
+        <TrackParcel />
         <FeaturesLogo />
-        <ServicesSection dict={dict}/>
-        <DeliveryCalculator dict={dict}/>
-        <ClientReview dict={dict}/>
-        <Accordion dict={dict}/>
+        <ServicesSection />
+        <DeliveryCalculator />
+        <ClientReview />
+        <Accordion />
     </LandingLayout>
   );
 }

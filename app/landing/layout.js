@@ -17,6 +17,7 @@ export default  function LandingLayout({ children}) {
  
   return (
     <div className={poppins.variable}>
+      
      <Navbar/>
       {children}
       <Footer/>
