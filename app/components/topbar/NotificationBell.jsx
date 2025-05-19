@@ -23,7 +23,7 @@ const NotificationBell = () => {
   }, []);
 
   return (
-    <div className="relative" ref={notificationRef}>
+    <div className="relative " ref={notificationRef}>
       <div
         className={`cursor-pointer p-3 rounded-full transition-all duration-300 ${
           isOpen ? "bg-[#F5F5F5]" : "bg-[#F5F5F5]"

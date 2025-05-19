@@ -12,8 +12,8 @@ import Link from "next/link";
 
 const sidebarItems = [
   { icon: FaThLarge, label: "Dashboard", href: "/dashboard" },
-  { icon: FaBox, label: "Parcels", href: "/dashboard/parcels" },
-  { icon: FaTruck, label: "Pickup Request", href: "/dashboard/pickup-request" },
+  { icon: FaBox, label: "Add Parcel", href: "/dashboard/parcels" },
+  { icon: FaBox, label: "Consignment", href: "/dashboard/consignments" },
   { icon: FaList, label: "Trackings", href: "/dashboard/trackings" },
   { icon: FaCreditCard, label: "Payments", href: "/dashboard/payments" },
   { icon: FaCreditCard, label: "Payments", href: "/dashboard/payments" },
@@ -38,7 +38,7 @@ const Sidebar = ({ isOpen, onClose }) => {
 
       <aside
         className={`fixed top-0 left-0 h-full bg-primary shadow transition-all duration-300 z-30 
-        ${isOpen ? "w-64" : "hidden md:block md:w-16"} flex flex-col`}
+        ${isOpen ? "w-64 " : "hidden md:block md:w-16"} flex flex-col`}
       >
         <div
           className={`border-b border-gray mx-3 pb-3 ${

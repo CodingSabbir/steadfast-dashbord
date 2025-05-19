@@ -7,7 +7,7 @@ const Footer = () => {
 
   const footerLinks = [
     {
-      title: "Pagedone",
+      title: tFooter("titleOne"),
       links: [
         { name: tFooter("links.0"), url: "#" },
         { name: tFooter("links.1"), url: "#" },
@@ -15,7 +15,7 @@ const Footer = () => {
       ],
     },
     {
-      title: "Contact",
+      title: tFooter("titleTwo"),
       links: [
         { name: tFooter("links.3"), url: "#" },
         { name: tFooter("links.4"), url: "#" },

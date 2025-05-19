@@ -14,6 +14,7 @@ import NotificationBell from "./topbar/NotificationBell";
 import ProfileMenu from "./topbar/Profile";
 import LanguageToggle from "./topbar/LanguageToggle";
 
+
 const Topbar = ({ toggleSidebar, toggleMobileSearch, showMobileSearch }) => {
   const [balanceClicked, setBalanceClicked] = useState(false);
 
@@ -110,6 +111,8 @@ const Topbar = ({ toggleSidebar, toggleMobileSearch, showMobileSearch }) => {
       <div className="md:hidden mt-3 flex justify-center">
         <CheckBalanceButton />
       </div>
+
+      
     </div>
   );
 };
