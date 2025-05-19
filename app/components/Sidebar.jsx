@@ -14,7 +14,7 @@ const sidebarItems = [
   { icon: FaThLarge, label: "Dashboard", href: "/dashboard" },
   { icon: FaBox, label: "Add Parcel", href: "/dashboard/parcels" },
   { icon: FaBox, label: "Consignment", href: "/dashboard/consignments" },
-  { icon: FaList, label: "Trackings", href: "/dashboard/trackings" },
+  { icon: FaList, label: "Fraud Check", href: "/dashboard/fraud-check" },
   { icon: FaCreditCard, label: "Payments", href: "/dashboard/payments" },
   { icon: FaCreditCard, label: "Payments", href: "/dashboard/payments" },
   { icon: FaCreditCard, label: "Payments", href: "/dashboard/payments" },

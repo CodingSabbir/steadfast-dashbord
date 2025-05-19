@@ -42,7 +42,7 @@ const Topbar = ({ toggleSidebar, toggleMobileSearch, showMobileSearch }) => {
   );
 
   return (
-    <div className="bg-primary px-5 py-8 shadow sticky top-0 z-10">
+    <div className="bg-primary px-5 py-8 shadow sticky top-0 z-10 ">
       <header className="flex justify-between items-center">
         <FaBars
           onClick={toggleSidebar}
@@ -89,7 +89,7 @@ const Topbar = ({ toggleSidebar, toggleMobileSearch, showMobileSearch }) => {
           )}
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 ">
           <FaSearch
             onClick={toggleMobileSearch}
             className="text-lg text-gray-600 cursor-pointer md:hidden hover:text-gray-800 transition-colors duration-200"

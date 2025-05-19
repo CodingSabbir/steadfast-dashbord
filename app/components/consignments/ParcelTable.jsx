@@ -38,8 +38,8 @@ const ParcelTable = () => {
       </div>
 
      
-      <div className="bg-white rounded shadow p-3 overflow-x-auto">
-        <table className="min-w-full text-left text-sm whitespace-nowrap">
+ <div className="w-full overflow-x-auto">
+  <table className="min-w-[800px] table-auto text-sm text-left text-gray-500">
           <thead className="border-b border-gray">
             <tr className="text-primary">
               <th className="px-4 py-3">SL#</th>
@@ -72,7 +72,4 @@ const ParcelTable = () => {
 };
 
 export default ParcelTable;
-
-
-
 

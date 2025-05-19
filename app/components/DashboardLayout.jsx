@@ -19,12 +19,14 @@ const DashboardLayout = ({ children }) => {
           isOpen ? "ml-64" : "ml-0 md:ml-16 "
         } `}
       >
-        <Topbar
+
+          <Topbar
           toggleSidebar={toggleSidebar}
           toggleMobileSearch={toggleMobileSearch}
           showMobileSearch={showMobileSearch}
           className="relative"
         />
+    
     
  
 
