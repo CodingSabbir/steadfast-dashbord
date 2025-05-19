@@ -69,18 +69,29 @@ const FraudCheck = () => {
         );
       case "Recent activity":
         return (
-          <div className="bg-primary p-6 rounded-lg shadow-md">
-            <h2 className="text-lg font-semibold text-gray-700 mb-4">
-              Recent Activity
-            </h2>
-            <div className="space-y-4">
-              <div className="p-3 border-b border-gray-200">
-                <p className="font-medium">Phone: +1234567890</p>
-                <p className="text-sm text-gray-500">Checked 2 hours ago</p>
-              </div>
-              <div className="p-3 border-b border-gray-200">
+          <div className="bg-primary p-6 rounded h-screen">
+          
+            <div className="space-y-4 bg-gray-50 px-2 py-5">
+           
+              <div className="p-3  border-gray text-primary">
                 <p className="font-medium">Phone: +9876543210</p>
-                <p className="text-sm text-gray-500">Checked 1 day ago</p>
+                <p className="font-medium py-2">Name : Ar Hanif/Shabar ashlia</p>
+
+                  <p className="font-medium">Details  :ই খান্কি মাগির পোলা অর্ডার করে পার্সেল রিসিভ করে না। ****** পোলারে ফোনে কথা বলে পার্সেল বুকিং দেওয়া হয়েছে। চার দিন ধরে ডেলিভারি ম্যানের কল পিক করে না। অফিস থেকে ফোন দিলে ****** ছেলে পার্সেলের কথা শুনে ফোন কেটে দেয়। এ ****** পোলা রে ডেলিভারি চার্জ ছাড়া কেউ পার্সেল দিবেন না এডভান্স নিয়ে নিবেন।</p>
+
+                <p className="text-md text-secondary text-end">19-05-2025 03:06 pm</p>
+              </div>
+            </div>
+
+               <div className="space-y-4 mt-5 bg-gray-50 px-2 py-5">
+           
+              <div className="p-3  border-gray text-primary">
+                <p className="font-medium">Phone: +9876543210</p>
+                <p className="font-medium py-2">Name : Ar Hanif/Shabar ashlia</p>
+
+                  <p className="font-medium">Details  :ই খান্কি মাগির পোলা অর্ডার করে পার্সেল রিসিভ করে না। ****** পোলারে ফোনে কথা বলে পার্সেল বুকিং দেওয়া হয়েছে। চার দিন ধরে ডেলিভারি ম্যানের কল পিক করে না। অফিস থেকে ফোন দিলে ****** ছেলে পার্সেলের কথা শুনে ফোন কেটে দেয়। এ ****** পোলা রে ডেলিভারি চার্জ ছাড়া কেউ পার্সেল দিবেন না এডভান্স নিয়ে নিবেন।</p>
+
+                <p className="text-md text-secondary text-end">19-05-2025 03:06 pm</p>
               </div>
             </div>
           </div>
