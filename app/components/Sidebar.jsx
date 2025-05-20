@@ -3,10 +3,10 @@ import {
   FaThLarge,
   FaBox,
  FaUserCheck ,
-  FaList,
   FaCreditCard,
 } from "react-icons/fa";
 import { FaArrowRightFromBracket } from "react-icons/fa6";
+import { FaCalculator } from "react-icons/fa6";
 import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -17,7 +17,7 @@ const sidebarItems = [
   { icon: FaBox, label: "Consignment", href: "/dashboard/consignments" },
   { icon: FaUserCheck, label: "Fraud Check", href: "/dashboard/fraud-check" },
   { icon: FaArrowRightFromBracket , label: "Pickup Requests ", href: "/dashboard/pickup-requests" },
-  { icon: FaCreditCard, label: "Payments", href: "/dashboard/payments" },
+  { icon: FaCalculator, label: "Pricing", href: "/dashboard/pricing" },
   { icon: FaCreditCard, label: "Payments", href: "/dashboard/payments" },
   { icon: FaCreditCard, label: "Payments", href: "/dashboard/payments" },
   { icon: FaCreditCard, label: "Payments", href: "/dashboard/payments" },
