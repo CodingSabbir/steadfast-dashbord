@@ -2,7 +2,7 @@
 import {
   FaThLarge,
   FaBox,
-  FaTruck,
+ FaUserCheck ,
   FaList,
   FaCreditCard,
 } from "react-icons/fa";
@@ -12,9 +12,9 @@ import Link from "next/link";
 
 const sidebarItems = [
   { icon: FaThLarge, label: "Dashboard", href: "/dashboard" },
-  { icon: FaBox, label: "Add Parcel", href: "/dashboard/parcels" },
+  { icon: FaBox, label: "Add Parcel", href: "/dashboard/add-parcel" },
   { icon: FaBox, label: "Consignment", href: "/dashboard/consignments" },
-  { icon: FaList, label: "Fraud Check", href: "/dashboard/fraud-check" },
+  { icon: FaUserCheck, label: "Fraud Check", href: "/dashboard/fraud-check" },
   { icon: FaCreditCard, label: "Payments", href: "/dashboard/payments" },
   { icon: FaCreditCard, label: "Payments", href: "/dashboard/payments" },
   { icon: FaCreditCard, label: "Payments", href: "/dashboard/payments" },

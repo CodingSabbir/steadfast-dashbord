@@ -1,10 +1,13 @@
 "use client";
 import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
+import StatusChart from "./StatusChart";
 
 const FraudCheck = () => {
   const [activeTab, setActiveTab] = useState("Check");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [hasSearched, setHasSearched] = useState(false);
   const menuRef = useRef(null);
   const buttonRef = useRef(null);
 
@@ -31,6 +34,11 @@ const FraudCheck = () => {
     setIsMenuOpen(false);
   };
 
+  const handleSearch = () => {
+    if (searchTerm.trim() !== "") {
+      setHasSearched(true);
+    }
+  };
   const menuItems = [
     { id: 1, name: "Check" },
     { id: 2, name: "Recent activity" },
@@ -42,63 +50,106 @@ const FraudCheck = () => {
     switch (activeTab) {
       case "Check":
         return (
-          <div className="bg-primary p-6 rounded  h-screen">
-            <div className="flex max-w-xl mx-auto ">
+          <div className="bg-primary p-6 rounded h-auto">
+            <div className="flex max-w-xl mx-auto">
               <input
                 type="text"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
                 placeholder="Search by phone number"
-                className="flex-grow px-4 py-3 border border-gray rounded-l-md text-secondary focus:outline-none "
+                className="flex-grow px-4 py-3 border border-gray rounded-l-md text-secondary focus:outline-none"
               />
-              <button className="button-primary bg-primary px-6 py-2 rounded-r-md cursor-pointer ">
+              <button
+                onClick={handleSearch}
+                className="button-primary bg-primary px-6 py-2 rounded-r-md cursor-pointer"
+              >
                 Search
               </button>
             </div>
-            <div className="flex justify-center pt-10">
-              <Image
-                className=" w-56 md:w-72"
-                src="/img/hacker.png"
-                alt=""
-                width={500}
-                height={500}
-              />
-            </div>
-            <p className="text-secondary font-medium text-md text-center pt-4">
-              Check fraud search by phone number
-            </p>
+
+            {!hasSearched ? (
+              <div>
+                <div className="flex justify-center pt-10">
+                  <Image
+                    className="w-56 md:w-72"
+                    src="/img/hacker.png"
+                    alt="Search placeholder"
+                    width={500}
+                    height={500}
+                  />
+                </div>
+                <p className="text-secondary font-medium text-md text-center pt-4">
+                  Check fraud search by phone number
+                </p>
+              </div>
+            ) : (
+              <div>
+                <div className="flex justify-center pt-10">
+                  <Image
+                    className="w-56 md:w-72"
+                    src="/img/fraud-check/undraw_coolness_xbgc.png"
+                    alt="Search result"
+                    width={500}
+                    height={500}
+                  />
+                </div>
+                <p className="text-secondary font-medium text-md text-center pt-4">
+                  The number has no fraud history !
+                </p>
+                <StatusChart />
+              </div>
+            )}
           </div>
         );
       case "Recent activity":
         return (
           <div className="bg-primary p-6 rounded h-screen">
-          
             <div className="space-y-4 bg-gray-50 px-2 py-5">
-           
               <div className="p-3  border-gray text-primary">
                 <p className="font-medium">Phone: +9876543210</p>
-                <p className="font-medium py-2">Name : Ar Hanif/Shabar ashlia</p>
+                <p className="font-medium py-2">
+                  Name : Ar Hanif/Shabar ashlia
+                </p>
 
-                  <p className="font-medium">Details  :ই খান্কি মাগির পোলা অর্ডার করে পার্সেল রিসিভ করে না। ****** পোলারে ফোনে কথা বলে পার্সেল বুকিং দেওয়া হয়েছে। চার দিন ধরে ডেলিভারি ম্যানের কল পিক করে না। অফিস থেকে ফোন দিলে ****** ছেলে পার্সেলের কথা শুনে ফোন কেটে দেয়। এ ****** পোলা রে ডেলিভারি চার্জ ছাড়া কেউ পার্সেল দিবেন না এডভান্স নিয়ে নিবেন।</p>
+                <p className="font-medium">
+                  Details :ই খান্কি মাগির পোলা অর্ডার করে পার্সেল রিসিভ করে না।
+                  ****** পোলারে ফোনে কথা বলে পার্সেল বুকিং দেওয়া হয়েছে। চার
+                  দিন ধরে ডেলিভারি ম্যানের কল পিক করে না। অফিস থেকে ফোন দিলে
+                  ****** ছেলে পার্সেলের কথা শুনে ফোন কেটে দেয়। এ ****** পোলা রে
+                  ডেলিভারি চার্জ ছাড়া কেউ পার্সেল দিবেন না এডভান্স নিয়ে নিবেন।
+                </p>
 
-                <p className="text-md text-secondary text-end">19-05-2025 03:06 pm</p>
+                <p className="text-md text-secondary text-end">
+                  19-05-2025 03:06 pm
+                </p>
               </div>
             </div>
 
-               <div className="space-y-4 mt-5 bg-gray-50 px-2 py-5">
-           
+            <div className="space-y-4 mt-5 bg-gray-50 px-2 py-5">
               <div className="p-3  border-gray text-primary">
                 <p className="font-medium">Phone: +9876543210</p>
-                <p className="font-medium py-2">Name : Ar Hanif/Shabar ashlia</p>
+                <p className="font-medium py-2">
+                  Name : Ar Hanif/Shabar ashlia
+                </p>
 
-                  <p className="font-medium">Details  :ই খান্কি মাগির পোলা অর্ডার করে পার্সেল রিসিভ করে না। ****** পোলারে ফোনে কথা বলে পার্সেল বুকিং দেওয়া হয়েছে। চার দিন ধরে ডেলিভারি ম্যানের কল পিক করে না। অফিস থেকে ফোন দিলে ****** ছেলে পার্সেলের কথা শুনে ফোন কেটে দেয়। এ ****** পোলা রে ডেলিভারি চার্জ ছাড়া কেউ পার্সেল দিবেন না এডভান্স নিয়ে নিবেন।</p>
+                <p className="font-medium">
+                  Details :ই খান্কি মাগির পোলা অর্ডার করে পার্সেল রিসিভ করে না।
+                  ****** পোলারে ফোনে কথা বলে পার্সেল বুকিং দেওয়া হয়েছে। চার
+                  দিন ধরে ডেলিভারি ম্যানের কল পিক করে না। অফিস থেকে ফোন দিলে
+                  ****** ছেলে পার্সেলের কথা শুনে ফোন কেটে দেয়। এ ****** পোলা রে
+                  ডেলিভারি চার্জ ছাড়া কেউ পার্সেল দিবেন না এডভান্স নিয়ে নিবেন।
+                </p>
 
-                <p className="text-md text-secondary text-end">19-05-2025 03:06 pm</p>
+                <p className="text-md text-secondary text-end">
+                  19-05-2025 03:06 pm
+                </p>
               </div>
             </div>
           </div>
         );
       case "Add new":
         return (
-          <div className="bg-primary p-6 rounded-lg shadow-md">
+          <div className="bg-primary p-6 rounded">
             <h2 className="text-lg font-semibold text-gray-700 mb-4">
               Add New Entry
             </h2>
@@ -127,7 +178,7 @@ const FraudCheck = () => {
         );
       case "My Entries":
         return (
-          <div className="bg-primary p-6 rounded-lg shadow-md">
+          <div className="bg-primary p-6 rounded">
             <h2 className="text-lg font-semibold text-gray-700 mb-4">
               My Entries
             </h2>
@@ -149,10 +200,11 @@ const FraudCheck = () => {
   };
 
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="bg-gray-100 min-h-screen pt-8">
       <div className="container mx-auto  md:pb-8">
         {/* Header */}
         <div className="flex justify-between items-center mb-8">
+
           <h1 className="text-2xl font-bold text-primary  md:hidden">
             Fraud Check
           </h1>

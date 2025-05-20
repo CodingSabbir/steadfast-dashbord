@@ -4,10 +4,10 @@ const ConsignmentPage = () => {
   return (
    <div>
      
-     <div className="absolute left-1/2 transform -translate-x-1/2 top-6 z-40  hidden md:block">
+     <div className="fixed left-1/2 transform -translate-x-1/2 top-6 z-40   hidden md:block">
       <FloatingTab />
     </div>
-  <div> <ParcelTable/></div>
+     <ParcelTable/>
    </div>
   );
 };

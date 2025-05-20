@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const FloatingTab = () => {
   return (
-    <div className="fixed top-[85px] left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300">
+    <div className="fixed top-[85px] left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 pl-28">
       <div className="bg-primary shadow-lg px-6 pt-4 pb-2 rounded-b-3xl flex gap-8 items-center">
         <div className="flex items-center gap-2">
           <Image
