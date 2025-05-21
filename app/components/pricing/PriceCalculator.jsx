@@ -7,7 +7,7 @@ const PriceCalculator = () => {
         <div>
               <div className="bg-gray-100 min-h-screen pt-8 ">
                  <div className="container mx-auto  md:pb-8">
-                    <h1 className="text-2xl font-bold text-primary  ">
+                    <h1 className="text-2xl font-bold text-primary mt-2 ">
                        Price Calculator
                     </h1>
                  </div>

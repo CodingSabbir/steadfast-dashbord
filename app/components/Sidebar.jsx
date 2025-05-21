@@ -2,26 +2,28 @@
 import {
   FaThLarge,
   FaBox,
- FaUserCheck ,
+  FaUserCheck,
   FaCreditCard,
 } from "react-icons/fa";
-import { FaArrowRightFromBracket } from "react-icons/fa6";
-import { FaCalculator } from "react-icons/fa6";
+import { FaArrowRightFromBracket, FaCalculator } from "react-icons/fa6";
 import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 
-const sidebarItems = [
+const mainItems = [
   { icon: FaThLarge, label: "Dashboard", href: "/dashboard" },
   { icon: FaBox, label: "Add Parcel", href: "/dashboard/add-parcel" },
   { icon: FaBox, label: "Consignment", href: "/dashboard/consignments" },
   { icon: FaUserCheck, label: "Fraud Check", href: "/dashboard/fraud-check" },
-  { icon: FaArrowRightFromBracket , label: "Pickup Requests ", href: "/dashboard/pickup-requests" },
+  { icon: FaArrowRightFromBracket, label: "Pickup Requests", href: "/dashboard/pickup-requests" },
   { icon: FaCalculator, label: "Pricing", href: "/dashboard/pricing" },
-  { icon: FaCreditCard, label: "Payments", href: "/dashboard/payments" },
-  { icon: FaCreditCard, label: "Payments", href: "/dashboard/payments" },
-  { icon: FaCreditCard, label: "Payments", href: "/dashboard/payments" },
-  { icon: FaCreditCard, label: "Payments", href: "/dashboard/payments" },
+];
+
+const otherItems = [
+ { icon: FaCalculator, label: "Api", href: "/dashboard/user/api" },
+  { icon: FaCreditCard, label: "Setting", href: "/dashboard/user/profile" },
+  { icon: FaCreditCard, label: "Change Password", href: "/dashboard/change-password" },
+  { icon: FaCreditCard, label: "Logout", href: "/dashboard/logout" },
 ];
 
 const Sidebar = ({ isOpen, onClose }) => {
@@ -32,20 +34,18 @@ const Sidebar = ({ isOpen, onClose }) => {
     <>
       {isOpen && (
         <div
-          className="fixed inset-0  bg-opacity-40 z-20 md:hidden"
+          className="fixed inset-0 bg-black bg-opacity-40 z-20 md:hidden"
           onClick={onClose}
         />
       )}
 
       <aside
         className={`fixed top-0 left-0 h-full bg-primary shadow transition-all duration-300 z-30 
-        ${isOpen ? "w-64 " : "hidden md:block md:w-16"} flex flex-col`}
+        ${isOpen ? "w-64" : "hidden md:block md:w-16"} flex flex-col`}
       >
         <div
           className={`border-b border-gray mx-3 pb-3 ${
-            isOpen
-              ? "flex gap-2 items-center md:flex-col mt-4"
-              : "flex flex-col items-center mt-4"
+            isOpen ? "flex gap-2 items-center md:flex-col mt-4" : "flex flex-col items-center mt-4"
           }`}
         >
           <div className={`flex justify-center ${isOpen ? "pb-2" : "pt-2"}`}>
@@ -61,12 +61,8 @@ const Sidebar = ({ isOpen, onClose }) => {
           </div>
           {isOpen && (
             <>
-              <h2 className="text-center font-semibold text-primary text-[18px]">
-                Sabbir
-              </h2>
-              <p className="text-[16px] text-center ">
-                ID: 1456975
-              </p>
+              <h2 className="text-center font-semibold text-primary text-[18px]">Sabbir</h2>
+              <p className="text-[16px] text-center">ID: 1456975</p>
             </>
           )}
         </div>
@@ -82,28 +78,53 @@ const Sidebar = ({ isOpen, onClose }) => {
           `}</style>
 
           {isOpen && (
-            <h1 className="px-4 text-[16px] text-secondary font-normal uppercase  mt-4 pb-2">
-              main menu
+            <h1 className="px-4 text-[16px] text-secondary font-normal uppercase mt-4 pb-2">
+              Main Menu
             </h1>
           )}
 
-          {sidebarItems.map(({ icon: Icon, label, href }, idx) => {
+          {mainItems.map(({ icon: Icon, label, href }, idx) => {
             const isActive = pathname === href;
             return (
               <Link
                 href={href}
                 key={idx}
-                className={`relative flex items-center gap-4 px-4 py-4 cursor-pointer
-                  ${
-                    isActive
-                      ? "bg-[#e5f7f4] !text-[#00b795] font-semibold border-l-4 border-[#00b795]"
-                      : "text-primary hover:bg-[#e5f7f4] text-primary-hover"
-                  }`}
+                className={`relative flex items-center gap-4 px-4 py-4 cursor-pointer ${
+                  isActive
+                    ? "bg-[#e5f7f4] !text-[#00b795] font-semibold border-l-4 border-[#00b795]"
+                    : "text-primary hover:bg-[#e5f7f4] text-primary-hover"
+                }`}
               >
                 <Icon
-                  className={`text-xl min-w-[20px] ${
-                    isActive ? "text-[#00b795]" : ""
-                  }`}
+                  className={`text-xl min-w-[20px] ${isActive ? "text-[#00b795]" : ""}`}
+                />
+                {isOpen && (
+                  <span className="text-[16px] capitalize text-primary">{label}</span>
+                )}
+              </Link>
+            );
+          })}
+
+          {isOpen && (
+            <h1 className="px-4 text-[16px] text-secondary font-normal uppercase mt-4 pb-2">
+              Others
+            </h1>
+          )}
+
+          {otherItems.map(({ icon: Icon, label, href }, idx) => {
+            const isActive = pathname === href;
+            return (
+              <Link
+                href={href}
+                key={idx}
+                className={`relative flex items-center gap-4 px-4 py-4 cursor-pointer ${
+                  isActive
+                    ? "bg-[#e5f7f4] !text-[#00b795] font-semibold border-l-4 border-[#00b795]"
+                    : "text-primary hover:bg-[#e5f7f4] text-primary-hover"
+                }`}
+              >
+                <Icon
+                  className={`text-xl min-w-[20px] ${isActive ? "text-[#00b795]" : ""}`}
                 />
                 {isOpen && (
                   <span className="text-[16px] capitalize text-primary">{label}</span>
