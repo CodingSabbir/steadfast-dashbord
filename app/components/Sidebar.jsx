@@ -2,7 +2,6 @@
 import {
   FaBox,
   FaUserCheck,
-  FaCreditCard,
 } from "react-icons/fa";
 import { FiSettings } from "react-icons/fi";
 import { FaDatabase } from "react-icons/fa6";
@@ -10,6 +9,7 @@ import { MdAddBox } from "react-icons/md";
 import { BiSolidDashboard } from "react-icons/bi";
 import { TbLockPassword } from "react-icons/tb";
 import { IoLogOut } from "react-icons/io5";
+import { LuSend } from "react-icons/lu";
 import { FaArrowRightFromBracket, FaCalculator } from "react-icons/fa6";
 import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
@@ -22,6 +22,7 @@ const mainItems = [
   { icon: FaUserCheck, label: "Fraud Check", href: "/dashboard/fraud-check" },
   { icon: IoLogOut, label: "Pickup Requests", href: "/dashboard/pickup-requests" },
   { icon: FaCalculator, label: "Pricing", href: "/dashboard/pricing" },
+  { icon: LuSend, label: "Tracking Parcel", href: "/dashboard/tracking-parcel" },
 ];
 
 const otherItems = [
