@@ -1,29 +1,34 @@
 "use client";
 import {
-  FaThLarge,
   FaBox,
   FaUserCheck,
   FaCreditCard,
 } from "react-icons/fa";
+import { FiSettings } from "react-icons/fi";
+import { FaDatabase } from "react-icons/fa6";
+import { MdAddBox } from "react-icons/md";
+import { BiSolidDashboard } from "react-icons/bi";
+import { TbLockPassword } from "react-icons/tb";
+import { IoLogOut } from "react-icons/io5";
 import { FaArrowRightFromBracket, FaCalculator } from "react-icons/fa6";
 import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 
 const mainItems = [
-  { icon: FaThLarge, label: "Dashboard", href: "/dashboard" },
-  { icon: FaBox, label: "Add Parcel", href: "/dashboard/add-parcel" },
+  { icon: BiSolidDashboard, label: "Dashboard", href: "/dashboard" },
+  { icon: MdAddBox, label: "Add Parcel", href: "/dashboard/add-parcel" },
   { icon: FaBox, label: "Consignment", href: "/dashboard/consignments" },
   { icon: FaUserCheck, label: "Fraud Check", href: "/dashboard/fraud-check" },
-  { icon: FaArrowRightFromBracket, label: "Pickup Requests", href: "/dashboard/pickup-requests" },
+  { icon: IoLogOut, label: "Pickup Requests", href: "/dashboard/pickup-requests" },
   { icon: FaCalculator, label: "Pricing", href: "/dashboard/pricing" },
 ];
 
 const otherItems = [
- { icon: FaCalculator, label: "Api", href: "/dashboard/user/api" },
-  { icon: FaCreditCard, label: "Setting", href: "/dashboard/user/profile" },
-  { icon: FaCreditCard, label: "Change Password", href: "/dashboard/change-password" },
-  { icon: FaCreditCard, label: "Logout", href: "/dashboard/logout" },
+ { icon: FaDatabase, label: "Api", href: "/dashboard/user/api" },
+  { icon: FiSettings, label: "Setting", href: "/dashboard/user/profile" },
+  { icon: TbLockPassword, label: "Change Password", href: "/dashboard/user/change-password" },
+  { icon: FaArrowRightFromBracket, label: "Logout", href: "/dashboard/logout" },
 ];
 
 const Sidebar = ({ isOpen, onClose }) => {
@@ -34,7 +39,7 @@ const Sidebar = ({ isOpen, onClose }) => {
     <>
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-40 z-20 md:hidden"
+          className="fixed inset-0  bg-opacity-40 z-20 md:hidden"
           onClick={onClose}
         />
       )}
