@@ -1,5 +1,4 @@
 import Button from "@/app/components/api/Button";
-import ClipboardCopy from "@/app/components/api/ClipboardCopy";
 import OthersTools from "@/app/components/api/OthersTools";
 import FloatingTab from "@/app/components/consignments/FloatingTab";
 
@@ -17,8 +16,7 @@ const ApiPage = () => {
           </h1>
         </div>
         <div className="bg-primary p-4 md:p-8">
-          <ClipboardCopy label="Api Key" text="ghtutjgudghrtiujerygjioeryj "/>
-          <ClipboardCopy label="Secret-Key " text="ghj234657687dhiuyoiu769789"/>
+         
            <Button/>
            <div>
             <OthersTools/>

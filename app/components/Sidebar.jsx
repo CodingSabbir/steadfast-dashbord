@@ -12,6 +12,7 @@ import { IoLogOut } from "react-icons/io5";
 import { LuSend } from "react-icons/lu";
 import { FaArrowRightFromBracket, FaCalculator } from "react-icons/fa6";
 import { usePathname, useRouter } from "next/navigation";
+import { MdOutlineInventory2 } from "react-icons/md";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -21,6 +22,7 @@ const mainItems = [
   { icon: FaBox, label: "Consignment", href: "/dashboard/consignments" },
   { icon: FaUserCheck, label: "Fraud Check", href: "/dashboard/fraud-check" },
   { icon: IoLogOut, label: "Pickup Requests", href: "/dashboard/pickup-requests" },
+  { icon: MdOutlineInventory2, label: "Inventory", href: "/dashboard/inventory" },
   { icon: FaCalculator, label: "Pricing", href: "/dashboard/pricing" },
   { icon: LuSend, label: "Tracking Parcel", href: "/dashboard/tracking-parcel" },
 ];

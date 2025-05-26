@@ -19,18 +19,7 @@ const ProfileInfo = () => {
                     
                 </div>
             ))}
-            <div className="flex items-center gap-5">
-                <p className="text-primary font-semibold text-lg">Data Entry Lock</p>
-                <SwitchToggle/>
-            </div>
-             <div className="flex items-center gap-5">
-                <p className="text-primary font-semibold text-lg">Amount Update Lock</p>
-                <SwitchToggle/>
-            </div>
-             <div className="flex items-center gap-5">
-                <p className="text-primary font-semibold text-lg">Consignment Data View Lock</p>
-                <SwitchToggle/>
-            </div>
+           
         </div>
     );
 };
