@@ -1,3 +1,6 @@
+'use client'
+import { useState } from "react";
+
 const products = [
   {
     image: "🟥",
@@ -20,7 +23,7 @@ const products = [
     weight: ".2kg",
     purchasePrice: "1250 TK",
     salePrice: "1550 TK",
-    sku: "TS561",
+    sku: "TS562",
     quantity: 10,
     stockValue: "125045 TK",
     status: "Active",
@@ -33,7 +36,7 @@ const products = [
     weight: ".2kg",
     purchasePrice: "1250 TK",
     salePrice: "1550 TK",
-    sku: "TS561",
+    sku: "TS563",
     quantity: 200,
     stockValue: "125045 TK",
     status: "Active",
@@ -46,7 +49,7 @@ const products = [
     weight: ".2kg",
     purchasePrice: "1250 TK",
     salePrice: "1550 TK",
-    sku: "TS561",
+    sku: "TS564",
     quantity: 200,
     stockValue: "125045 TK",
     status: "Pending",
@@ -59,7 +62,7 @@ const products = [
     weight: ".2kg",
     purchasePrice: "1250 TK",
     salePrice: "1550 TK",
-    sku: "TS561",
+    sku: "TS565",
     quantity: 0,
     stockValue: "0 TK",
     status: "Active",
@@ -67,11 +70,35 @@ const products = [
 ];
 
 export default function ProductTable() {
+  const [selected, setSelected] = useState([]);
+  const allChecked = selected.length === products.length;
+
+  const toggleSelectAll = () => {
+    if (allChecked) {
+      setSelected([]);
+    } else {
+      setSelected(products.map((p) => p.sku));
+    }
+  };
+
+  const toggleRow = (sku) => {
+    setSelected((prev) =>
+      prev.includes(sku) ? prev.filter((id) => id !== sku) : [...prev, sku]
+    );
+  };
+
   return (
-    <div className="overflow-x-auto  md:p-4">
+    <div className="overflow-x-auto md:p-4">
       <table className="min-w-full text-sm border border-gray-300">
         <thead className="bg-gray-100">
           <tr>
+            <th className="p-2 border text-center">
+              <input
+                type="checkbox"
+                checked={allChecked}
+                onChange={toggleSelectAll}
+              />
+            </th>
             <th className="p-2 border">Images</th>
             <th className="p-2 border">Product Name</th>
             <th className="p-2 border">Category</th>
@@ -89,7 +116,7 @@ export default function ProductTable() {
         <tbody>
           {products.map((p, i) => (
             <tr
-              key={i}
+              key={p.sku}
               className={
                 p.quantity === 0
                   ? "bg-red-200"
@@ -98,6 +125,13 @@ export default function ProductTable() {
                   : ""
               }
             >
+              <td className="p-2 border text-center">
+                <input
+                  type="checkbox"
+                  checked={selected.includes(p.sku)}
+                  onChange={() => toggleRow(p.sku)}
+                />
+              </td>
               <td className="p-2 border text-center">{p.image}</td>
               <td className="p-2 border">{p.name}</td>
               <td className="p-2 border">{p.category}</td>
@@ -117,7 +151,7 @@ export default function ProductTable() {
                   {p.status}
                 </span>
               </td>
-              <td className="p-2 border"></td>
+              <td className="p-2 border">...</td>
             </tr>
           ))}
         </tbody>
