@@ -7,8 +7,7 @@ const ProfileInfo = () => {
     { label: "Email", value: "sabbir@example.com",icon:<FaRegEdit /> },
     { label: "Phone", value: "+880123456789",icon:<FaRegEdit /> },
     { label: "Address", value: "Dhaka, Bangladesh",icon:<FaRegEdit /> },
-    { label: "Role", value: "Frontend Developer",icon:<FaRegEdit /> },
-    { label: "Status", value: "Active",icon:<FaRegEdit /> }
+  
 ];
     return (
         <div className="p-4 md:p-8 space-y-4">
