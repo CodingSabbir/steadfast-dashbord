@@ -8,7 +8,7 @@ import {
 const categories = ["Electronics", "Clothing", "Books", "Groceries"];
 export default function ActionBar() {
   return (
-    <div className="flex items-center justify-between gap-2 md:gap-0 bg-blue-50 py-3 md:py-0 md:p-4 rounded ">
+    <div className="flex items-center justify-between gap-2 md:gap-0  py-3 md:py-0 md:p-4 rounded ">
       <div className="relative">
         <select className="border border-gray rounded px-3 py-2 bg-primary text-sm font-medium text-primary focus:outline-none w-full cursor-pointer">
           <option value="">Export Selected</option>
