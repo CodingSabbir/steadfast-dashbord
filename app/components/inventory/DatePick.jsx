@@ -16,7 +16,7 @@ const DatePick = () => {
       </h1>
 
       <div className="flex items-center justify-between md:justify-start gap-2">
-        <div className="flex items-center border border-gray rounded px-3 py-1 bg-white relative">
+        <div className="flex items-center border border-gray rounded px-3 py-1 bg-primary relative">
           <span className="text-secondary mr-2">📅</span>
 
           <DatePicker

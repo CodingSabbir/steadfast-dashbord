@@ -89,7 +89,7 @@ export default function ProductTable() {
 
   return (
     <div className="overflow-x-auto md:p-4">
-      <table className="min-w-full text-sm border border-gray-300">
+      <table className="min-w-full text-sm border border-gray">
         <thead className="bg-gray-100">
           <tr>
             <th className="p-2 border text-center">
