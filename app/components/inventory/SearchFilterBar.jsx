@@ -2,7 +2,7 @@ import { FiSearch } from "react-icons/fi";
 const categories = ["Electronics", "Clothing", "Books", "Groceries"];
 const SearchFilterBar = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 bg-sky-50 md:p-4 rounded-lg">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-3  md:p-4 rounded-lg">
       <div className="flex items-center border border-gray rounded px-3 py-2 bg-primary">
         <FiSearch className="text-secondary text-lg mr-2" />
         <input

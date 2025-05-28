@@ -28,7 +28,7 @@ const StockStatusCards = () => {
   ];
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 bg-sky-50 md:p-4 rounded-lg py-4 md:py-0">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-4  md:p-4 rounded-lg py-4 md:py-0">
       {cardData.map((item, index) => (
         <div
           key={index}
