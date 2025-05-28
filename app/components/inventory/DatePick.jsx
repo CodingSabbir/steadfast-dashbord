@@ -1,8 +1,9 @@
 "use client";
-import React, { useState, useRef } from "react";
+import  { useState, useRef } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { RiArrowDropDownLine } from "react-icons/ri";
+import Link from "next/link";
 
 const DatePick = () => {
   const [startDate, setStartDate] = useState(() => new Date());
@@ -33,9 +34,11 @@ const DatePick = () => {
           />
         </div>
 
+       <Link href="/dashboard/products-list">
         <button className="button-primary font-medium cursor-pointer text-sm px-4 py-2 rounded">
           Add Product
         </button>
+       </Link>
       </div>
     </div>
   );
